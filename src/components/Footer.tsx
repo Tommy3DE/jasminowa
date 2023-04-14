@@ -1,9 +1,9 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import "../App.css";
-const Navbar = () => {
+const Footer = () => {
   return (
-    <nav className="sticky shadow-md w-full m-auto">
+    <footer className="sticky shadow-md w-full m-auto">
       <div className="flex justify-evenly h-[100px] w-[50%] m-auto">
         <img
           src={logo}
@@ -25,9 +25,13 @@ const Navbar = () => {
           </li>
         </ul>
       </div>
-      
-    </nav>
+      <section className="mx-auto max-w-[70px]">
+        <h1 className="text-[17px] font-bold cinzel">
+            DOMWISE Sp. z o.o.
+        </h1>
+      </section>
+    </footer>
   );
 };
 
-export default Navbar;
+export default Footer;

@@ -1,7 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Roboto:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&display=swap');
+
 #root {
   margin: 0 auto;
 }
-@import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Roboto:ital@0;1&display=swap');
+
 nav{
   font-family: 'Alegreya', serif;
+}
+footer{
+  font-family: 'Alegreya', serif;
+}
+.cinzel{
+  font-family: 'Cinzel';
 }
