@@ -29,6 +29,8 @@ const Footer = () => {
         <h1 className="text-[17px] font-bold cinzel">
             DOMWISE Sp. z o.o.
         </h1>
+        <a href="mailto:sprzedaz@jaspisowaapartamenty.pl">sprzedaz@jaspisowaapartamenty.pl</a>
+        <a href="tel:516 735 753">tel. 516 735 753</a>
       </section>
     </footer>
   );
