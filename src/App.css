@@ -5,12 +5,10 @@
   margin: 0 auto;
 }
 
-nav{
-  font-family: 'Alegreya', serif;
-}
-footer{
-  font-family: 'Alegreya', serif;
-}
 .cinzel{
   font-family: 'Cinzel';
+}
+
+.alegreya{
+  font-family: 'Alegreya', serif;
 }

@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import "../App.css";
 const Footer = () => {
   return (
-    <footer className="w-full m-auto">
+    <footer className="w-full m-auto alegreya">
       <div className="flex justify-evenly h-[100px] w-[50%] m-auto flex-col lg:flex-row">
         <img
           src={logo}
