@@ -4,9 +4,10 @@ import Footer from './components/Footer'
 import Gallery from './components/Gallery'
 import Main from './components/Main'
 import Navbar from './components/Navbar'
-import './App.css'
 import SmartMakieta from './components/SmartMakieta'
 import Okolica from './components/Okolica'
+import Aktualnosci from './components/Aktualnosci'
+import './App.css'
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Flats/>
       <SmartMakieta/>
       <Okolica/>
+      <Aktualnosci/>
       <Footer/>
     </div>
   )
