@@ -3,7 +3,7 @@ import { posty } from '../data/posty'
 
 const Aktualnosci = () => {
   return (
-    <section className='mx-auto w-full md:w-1/2 cinzel'>
+    <section className='mx-auto w-full xl:w-1/2 cinzel'>
         <h1 className='text-[#2f917e] text-5xl text-center my-20'>Aktualności</h1>
         <ul>
             {posty.map((post)=> (

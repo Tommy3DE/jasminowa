@@ -8,6 +8,7 @@ import SmartMakieta from './components/SmartMakieta'
 import Okolica from './components/Okolica'
 import Aktualnosci from './components/Aktualnosci'
 import './App.css'
+import FormularzKontaktowy from './components/FormularzKontaktowy'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <SmartMakieta/>
       <Okolica/>
       <Aktualnosci/>
+      <FormularzKontaktowy/>
       <Footer/>
     </div>
   )
