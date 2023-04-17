@@ -3,7 +3,7 @@ import { Element } from "react-scroll";
 
 const FormularzKontaktowy = () => {
     const handleSubmit =(e: SubmitEvent)=>{
-        e.preventDefault
+        e.preventDefault()
     }
     return (
       <Element className="h-full w-full relative" name='kontakt'>

@@ -9,6 +9,7 @@ import Okolica from './components/Okolica'
 import Aktualnosci from './components/Aktualnosci'
 import './App.css'
 import FormularzKontaktowy from './components/FormularzKontaktowy'
+import Mapa from './components/Mapa'
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Flats/>
       <SmartMakieta/>
       <Okolica/>
+      <Mapa/>
       <Aktualnosci/>
       <FormularzKontaktowy/>
       <Footer/>

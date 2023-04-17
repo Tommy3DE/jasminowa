@@ -1,5 +1,5 @@
-import React from "react";
 import logo from "../assets/logo.png";
+import { Link } from "react-scroll";
 import "../App.css";
 const Footer = () => {
   return (
@@ -11,17 +11,25 @@ const Footer = () => {
           className="w-[200px] h-[52px] my-auto mx-1"
         />
         <ul className="flex flex-col lg:flex-row text-[#2f917e] justify-center w-[70%] items-center text-[17px] uppercase font-bold">
-          <li className="mx-5 my-6 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Atuty inwestycji
+        <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
+            <Link to="atuty" smooth={true} duration={1000}>
+              Atuty inwestycji
+            </Link>
           </li>
-          <li className="mx-5 my-6 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Zobacz mieszkania
+          <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
+            <Link to="mieszkania" smooth={true} duration={1000}>
+              Zobacz mieszkania
+            </Link>
           </li>
-          <li className="mx-5 my-6 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Lokalizacja
+          <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
+            <Link to="lokalizacja" smooth={true} duration={1000}>
+              Lokalizacja
+            </Link>
           </li>
-          <li className="mx-5 my-6 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Kontakt
+          <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
+            <Link to="kontakt" smooth={true} duration={1000}>
+              Kontakt
+            </Link>
           </li>
         </ul>
       </div>

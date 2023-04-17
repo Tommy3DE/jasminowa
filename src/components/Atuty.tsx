@@ -11,7 +11,7 @@ const Atuty: React.FC = () => {
       </h1>
       <ul className="lg:w-1/2 w-full mx-auto">
         {atuty.map((atut) => (
-          <li className="flex my-14 items-center justify-start">
+          <li className="flex my-14 items-center justify-start" key={atut.title}>
             <div className="w-[200px] flex justify-center ">
               <img src={atut.img} alt={atut.title} className="w-fit" />
             </div>

@@ -13,8 +13,8 @@ const Gallery = () => {
     ]
   return (
     <div className='flex flex-wrap'>
-      {galleryPhotos.map((photo)=>(
-        <div className='w-1/3'>
+      {galleryPhotos.map((photo, index)=>(
+        <div className='w-1/3' key={index}>
           <img src={photo} alt="photo" />
         </div>
       ))}

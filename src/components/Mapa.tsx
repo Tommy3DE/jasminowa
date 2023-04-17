@@ -1,20 +1,35 @@
-import React from "react";
-import { GoogleMap, Marker } from "react-google-maps";
+const key = "AIzaSyD1meEVK830PVGq01pd6AakYYbV3iVCBls";
+
+import React from 'react'
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import { Element } from "react-scroll";
 
+const containerStyle = {
+  width: '100vw',
+  height: '600px'
+};
 
-function Map() {
+const center = {
+  lat: 50.0565318,
+  lng: 22.047835
+};
+
+function Mapa() {
   return (
     <Element name='lokalizacja'>
+    <LoadScript
+      googleMapsApiKey="AIzaSyA7Oo3MjWtDUZxU2-ebsoInbnKg5qGoTLE"
+    >
       <GoogleMap
-        apiKey="AIzaSyD1meEVK830PVGq01pd6AakYYbV3iVCBls"
-        defaultZoom={10}
-        defaultCenter={{ lat: 37.7749, lng: -122.4194 }}
+        mapContainerStyle={containerStyle}
+        center={center}
+        zoom={12}
       >
-        <Marker position={{ lat: 37.7749, lng: -122.4194 }} />
+
       </GoogleMap>
+    </LoadScript>
     </Element>
-  );
+  )
 }
 
-export default Map;
+export default Mapa
