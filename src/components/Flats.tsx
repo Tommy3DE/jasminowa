@@ -1,9 +1,10 @@
 import React from "react";
 import { mieszkania } from "../data/mieszkania";
+import { Element } from "react-scroll";
 
 const Flats = () => {
   return (
-    <section className="cinzel w-full h-screen bg-[#2f917e]">
+    <Element className="cinzel w-full h-screen bg-[#2f917e]" name="mieszkania">
       <h1 className="text-5xl text-white text-center py-28">
         Dostępne mieszkania
       </h1>
@@ -44,7 +45,7 @@ const Flats = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </Element>
   );
 };
 

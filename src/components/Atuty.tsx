@@ -1,9 +1,11 @@
 import React from "react";
 import { atuty } from "../data/atuty";
+import { Element } from "react-scroll";
+
 
 const Atuty: React.FC = () => {
   return (
-    <section className="cinzel">
+    <Element className="cinzel" name='atuty'>
       <h1 className="text-5xl text-center my-20 text-[#2f917e]">
         ATUTY INWESTYCJI
       </h1>
@@ -21,7 +23,7 @@ const Atuty: React.FC = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </Element>
   );
 };
 

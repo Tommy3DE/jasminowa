@@ -1,4 +1,4 @@
-import React from "react";
+import { Link } from "react-scroll";
 import logo from "../assets/logo.png";
 import "../App.css";
 const Navbar = () => {
@@ -12,20 +12,27 @@ const Navbar = () => {
         />
         <ul className="flex text-[#2f917e] justify-center w-[70%] items-center text-[17px] uppercase">
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Atuty inwestycji
+            <Link to="atuty" smooth={true} duration={1000}>
+              Atuty inwestycji
+            </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Zobacz mieszkania
+            <Link to="mieszkania" smooth={true} duration={1000}>
+              Zobacz mieszkania
+            </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Lokalizacja
+            <Link to="lokalizacja" smooth={true} duration={1000}>
+              Lokalizacja
+            </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            Kontakt
+            <Link to="kontakt" smooth={true} duration={1000}>
+              Kontakt
+            </Link>
           </li>
         </ul>
       </div>
-      
     </nav>
   );
 };
