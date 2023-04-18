@@ -32,7 +32,7 @@ const FormularzKontaktowy = () => {
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+    e.preventDefault()
     console.log(nameRef.current?.value);
     console.log(phoneRef.current?.value);
     console.log(mailRef.current?.value);
@@ -43,7 +43,7 @@ const FormularzKontaktowy = () => {
   return (
     <Element className="h-full w-full relative" name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full" />
-      <form className="cinzel bg-[#b59d32] w-1/2 flex flex-col items-start justify-start mx-auto p-12 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <form className="cinzel bg-[#b59d32] w-1/2 flex flex-col items-start justify-start mx-auto p-12 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 " onSubmit={(e) => handleSubmit}>
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
@@ -53,6 +53,7 @@ const FormularzKontaktowy = () => {
           type="text"
           placeholder="Imię i Nazwisko"
           className="placeholder:text-gray-400 p-3 w-4/5 mt-5 alegreya"
+          required={true}
           ref={nameRef}
           onFocus={handleNameFocus}
           onBlur={handleNameBlur}
@@ -64,12 +65,13 @@ const FormularzKontaktowy = () => {
           type="email"
           placeholder="Adres email"
           className="placeholder:text-slate-400 p-3 w-4/5 mt-5 alegreya"
+          required={true}
           ref={mailRef}
           onFocus={handleMailFocus}
           onBlur={handleMailBlur}
         />
         {mailFocus && mailRef.current?.value.trim() === "" && (
-        <p className="text-red-500">Proszę podać numer telefonu.</p>
+        <p className="text-red-500">Proszę podać email.</p>
       )}
         <input
           type="tel"
@@ -77,6 +79,7 @@ const FormularzKontaktowy = () => {
           className="placeholder:text-slate-400 p-3 w-4/5 mt-5 alegreya"
           pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
           maxLength={9}
+          required={true}
           ref={phoneRef}
           onFocus={handlePhoneFocus}
           onBlur={handlePhoneBlur}
@@ -123,7 +126,7 @@ const FormularzKontaktowy = () => {
         <button
           type="submit"
           className="bg-[#2f917e] mt-5 text-white alegreya text-xl p-3 font-bold"
-          onSubmit={(e) => handleSubmit}
+          
         >
           Wyślij zapytanie
         </button>

@@ -21,9 +21,8 @@ const Main: React.FC = () => {
     <section>
       <div className="relative h-screen w-full">
         {photos.map((photo: string, index: number) => (
-          <div>
+          <div key={index}>
             <img
-              key={index}
               src={photo}
               alt={`Photo ${index + 1}`}
               className={`absolute h-full w-full transition-all duration-1000 ${

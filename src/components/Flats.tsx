@@ -22,7 +22,7 @@ const Flats = () => {
       </ul>
       <ul className="text-black mx-auto">
         {mieszkania.map((flat) => (
-          <li className=" w-1/2 mx-auto bg-slate-50 flex justify-between py-7 my-3 items-center">
+          <li className=" w-1/2 mx-auto bg-slate-50 flex justify-between py-7 my-3 items-center" key={flat.num}>
             <p className="w-1/8 mx-auto">{flat.num}</p>
             <p className="w-1/8 mx-auto">{flat.pow} m2</p>
             <p className="w-1/8 mx-auto">{!flat.ogrod ? "brak" : flat.ogrod}</p>
