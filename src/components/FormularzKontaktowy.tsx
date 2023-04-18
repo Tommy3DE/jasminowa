@@ -38,12 +38,19 @@ const FormularzKontaktowy = () => {
     console.log(mailRef.current?.value);
     console.log(messageRef.current?.value);
     
+    setNameFocus(false);
+    setMailFocus(false);
+    setPhoneFocus(false);
+    nameRef.current!.value = "";
+    mailRef.current!.value = "";
+    phoneRef.current!.value = "";
+    messageRef.current!.value = "";
   };
 
   return (
     <Element className="h-full w-full relative" name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full" />
-      <form className="cinzel bg-[#b59d32] w-1/2 flex flex-col items-start justify-start mx-auto p-12 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 " onSubmit={(e) => handleSubmit}>
+      <form className="cinzel bg-[#b59d32] w-1/2 flex flex-col items-start justify-start mx-auto p-12 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 " onSubmit={handleSubmit}>
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
@@ -94,7 +101,7 @@ const FormularzKontaktowy = () => {
         />
         <div className="flex flex-col alegreya">
           <div className="px-3 mt-3">
-            <input type="checkbox" />
+            <input type="checkbox" required={true} />
             <span className="text-sm text-white ml-2">
               *Oświadczam, iż zapoznałem/am się z{" "}
               <a href="" className="text-blue-600">

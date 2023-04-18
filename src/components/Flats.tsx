@@ -5,7 +5,7 @@ import { Element } from "react-scroll";
 const Flats = () => {
   return (
     <Element className="cinzel w-full h-screen bg-[#2f917e]" name="mieszkania">
-      <h1 className="text-5xl text-white text-center py-28">
+      <h1 className="text-5xl text-white text-center py-10">
         Dostępne mieszkania
       </h1>
       <ul className="flex justify-between w-1/2  items-center text-white mx-auto">
