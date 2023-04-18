@@ -1,7 +1,7 @@
 const key = "AIzaSyD1meEVK830PVGq01pd6AakYYbV3iVCBls";
 
 import React from 'react'
-import { GoogleMap, LoadScript } from '@react-google-maps/api';
+import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api';
 import { Element } from "react-scroll";
 
 const containerStyle = {
@@ -23,9 +23,9 @@ function Mapa() {
       <GoogleMap
         mapContainerStyle={containerStyle}
         center={center}
-        zoom={12}
+        zoom={15}
       >
-
+        <Marker position={center} />
       </GoogleMap>
     </LoadScript>
     </Element>

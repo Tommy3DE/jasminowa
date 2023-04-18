@@ -1,14 +1,49 @@
 import jaspisbg from "../assets/photos/hq/jaspishq1.jpeg";
 import { Element } from "react-scroll";
+import { FormEvent, useRef, useState } from "react";
 
 const FormularzKontaktowy = () => {
-    const handleSubmit =(e: SubmitEvent)=>{
-        e.preventDefault()
-    }
-    return (
-      <Element className="h-full w-full relative" name='kontakt'>
-        <img src={jaspisbg} alt="bg-formularz" className="w-full h-full" />
-        <form className="cinzel bg-[#b59d32] w-1/2 flex flex-col items-start justify-start mx-auto p-12 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+  const [nameFocus, setNameFocus] = useState(false)
+  const [mailFocus, setMailFocus] = useState(false)
+  const [phoneFocus, setPhoneFocus] = useState(false)
+
+  const nameRef = useRef<HTMLInputElement>(null);
+  const mailRef = useRef<HTMLInputElement>(null);
+  const phoneRef = useRef<HTMLInputElement>(null)
+  const messageRef = useRef<HTMLTextAreaElement>(null);
+
+  const handleNameFocus =()=> {
+    setNameFocus(true)
+  }
+  const handleNameBlur = () => {
+    setNameFocus(false);
+  };
+  const handleMailFocus =()=> {
+    setMailFocus(true)
+  }
+  const handleMailBlur = () => {
+    setMailFocus(false);
+  };
+  const handlePhoneFocus =()=> {
+    setPhoneFocus(true)
+  }
+  const handlePhoneBlur = () => {
+    setPhoneFocus(false);
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log(nameRef.current?.value);
+    console.log(phoneRef.current?.value);
+    console.log(mailRef.current?.value);
+    console.log(messageRef.current?.value);
+    
+  };
+
+  return (
+    <Element className="h-full w-full relative" name="kontakt">
+      <img src={jaspisbg} alt="bg-formularz" className="w-full h-full" />
+      <form className="cinzel bg-[#b59d32] w-1/2 flex flex-col items-start justify-start mx-auto p-12 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
@@ -18,20 +53,41 @@ const FormularzKontaktowy = () => {
           type="text"
           placeholder="Imię i Nazwisko"
           className="placeholder:text-gray-400 p-3 w-4/5 mt-5 alegreya"
+          ref={nameRef}
+          onFocus={handleNameFocus}
+          onBlur={handleNameBlur}
         />
+        {nameFocus && nameRef.current?.value.trim() === "" && (
+        <p className="text-red-500">Proszę podać imię i nazwisko.</p>
+      )}
         <input
           type="email"
           placeholder="Adres email"
           className="placeholder:text-slate-400 p-3 w-4/5 mt-5 alegreya"
+          ref={mailRef}
+          onFocus={handleMailFocus}
+          onBlur={handleMailBlur}
         />
+        {mailFocus && mailRef.current?.value.trim() === "" && (
+        <p className="text-red-500">Proszę podać numer telefonu.</p>
+      )}
         <input
           type="tel"
           placeholder="Telefon"
           className="placeholder:text-slate-400 p-3 w-4/5 mt-5 alegreya"
+          pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
+          maxLength={9}
+          ref={phoneRef}
+          onFocus={handlePhoneFocus}
+          onBlur={handlePhoneBlur}
         />
+        {phoneFocus && phoneRef.current?.value.trim() === "" && (
+        <p className="text-red-500">Proszę podać numer telefonu.</p>
+      )}
         <textarea
           placeholder="Treść wiadomości"
           className="placeholder:text-slate-400 p-3 w-11/12 h-40 mt-5 alegreya"
+          ref={messageRef}
         />
         <div className="flex flex-col alegreya">
           <div className="px-3 mt-3">
@@ -64,7 +120,13 @@ const FormularzKontaktowy = () => {
             </span>
           </div>
         </div>
-        <button type="submit" className="bg-[#2f917e] mt-5 text-white alegreya text-xl p-3 font-bold" onSubmit={(e)=>handleSubmit}>Wyślij zapytanie</button>
+        <button
+          type="submit"
+          className="bg-[#2f917e] mt-5 text-white alegreya text-xl p-3 font-bold"
+          onSubmit={(e) => handleSubmit}
+        >
+          Wyślij zapytanie
+        </button>
       </form>
     </Element>
   );
