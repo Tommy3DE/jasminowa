@@ -1,10 +1,10 @@
 import React from "react";
 import { mieszkania } from "../data/mieszkania";
 import { Element } from "react-scroll";
-
+import './Atuty.css'
 const Flats = () => {
   return (
-    <Element className="cinzel w-full h-screen bg-[#2f917e]" name="mieszkania">
+    <Element className="cinzel w-full h-auto bg-[#2f917e]" name="mieszkania">
       <h1 className="text-5xl text-white text-center py-10">
         Dostępne mieszkania
       </h1>
@@ -20,7 +20,7 @@ const Flats = () => {
           Katalog do <br /> pobrania
         </li>
       </ul>
-      <ul className="text-black mx-auto">
+      <ul className="text-black mx-auto py-3">
         {mieszkania.map((flat) => (
           <li className=" w-1/2 mx-auto bg-slate-50 flex justify-between py-7 my-3 items-center" key={flat.num}>
             <p className="w-1/8 mx-auto">{flat.num}</p>

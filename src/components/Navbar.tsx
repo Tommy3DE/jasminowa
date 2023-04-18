@@ -4,7 +4,7 @@ import "../App.css";
 const Navbar = () => {
   return (
     <nav className="sticky shadow-md w-full m-auto alegreya">
-      <div className="flex justify-evenly h-[100px] w-[50%] m-auto">
+      <div className="flex justify-evenly h-[100px] w-[60%] m-auto">
         <img
           src={logo}
           alt="logo"

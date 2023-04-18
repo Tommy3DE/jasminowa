@@ -4,7 +4,7 @@ import "../App.css";
 const Footer = () => {
   return (
     <footer className="w-full m-auto alegreya">
-      <div className="flex justify-evenly h-[100px] w-[50%] m-auto flex-col lg:flex-row">
+      <div className="flex justify-evenly h-[100px] w-[60%] m-auto flex-col lg:flex-row">
         <img
           src={logo}
           alt="logo"
@@ -33,7 +33,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <section className="mx-auto max-w-[49%] flex flex-col my-10">
+      <section className="mx-auto max-w-[55%] flex flex-col my-10">
         <h1 className="text-[17px] font-bold cinzel">DOMWISE Sp. z o.o.</h1>
         <a href="mailto:sprzedaz@jaspisowaapartamenty.pl">
           sprzedaz@jaspisowaapartamenty.pl

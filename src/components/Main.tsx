@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import jaspis1 from "../assets/photos/hq/jaspishq1.jpeg";
 import jaspis2 from "../assets/photos/hq/jaspishq2.jpg";
 import hero from "../assets/hero.png";
+import { Link } from "react-scroll";
 const photos: string[] = [jaspis1, jaspis2];
 
 const Main: React.FC = () => {
@@ -30,14 +31,16 @@ const Main: React.FC = () => {
               }`}
             />
             <div className="absolute top-[50%]">
-              <a
-                href=""
+              <Link
+                to="mieszkania"
+                smooth={true} 
+                duration={1000}
                 className="bg-[#2f917e] text-white h-10 p-3 text-xl font-bold"
               >
                 Zobacz mieszkania
-              </a>
+              </Link>
               <div className="relative cinzel">
-                <img src={hero} alt="hero" className="xl:w-[1900px] w-full" />
+                <img src={hero} alt="hero" className="xl:w-[1600px] w-full" />
                 <h1 className="absolute ml-14 text-6xl text-white top-9">
                   Życie w w otoczeniu <br/> przyrody
                 </h1>

@@ -1,12 +1,12 @@
 import React from "react";
 import { atuty } from "../data/atuty";
 import { Element } from "react-scroll";
-
+import './Atuty.css'
 
 const Atuty: React.FC = () => {
   return (
     <Element className="cinzel" name='atuty'>
-      <h1 className="text-5xl text-center my-20 text-[#2f917e]">
+      <h1 className="text-5xl text-center my-20 text-[#2f917e] ">
         ATUTY INWESTYCJI
       </h1>
       <ul className="lg:w-1/2 w-full mx-auto">

@@ -48,9 +48,9 @@ const FormularzKontaktowy = () => {
   };
 
   return (
-    <Element className="h-full w-full relative" name="kontakt">
+    <Element className="h-full w-full relative " name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full" />
-      <form className="cinzel bg-[#b59d32] w-1/2 flex flex-col items-start justify-start mx-auto p-12 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 " onSubmit={handleSubmit}>
+      <form className="cinzel bg-[#b59d32] xl:h-3/4 h-full w-1/2 flex flex-col items-start justify-center mx-auto p-10 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 " onSubmit={handleSubmit}>
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
@@ -96,7 +96,7 @@ const FormularzKontaktowy = () => {
       )}
         <textarea
           placeholder="Treść wiadomości"
-          className="placeholder:text-slate-400 p-3 w-11/12 h-40 mt-5 alegreya"
+          className="placeholder:text-slate-400 p-3 w-11/12 h-40 mt-3 alegreya"
           ref={messageRef}
         />
         <div className="flex flex-col alegreya">

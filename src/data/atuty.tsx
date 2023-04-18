@@ -27,7 +27,7 @@ export const atuty:Atuty[] = [
     },
     {
         img: parking,
-        title: 'Brak problemów z parkowaniem',
+        title: 'Łatwe Parkowanie',
         text1: '2 duże miejsca parkingowe do każdego mieszkania w cenie.',
         text2: 'Możliwość ładowania samochodu elektrycznego.'
     },

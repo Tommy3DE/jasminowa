@@ -1,0 +1,20 @@
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0%);
+      opacity: 1;
+    }
+  }
+  
+  ul li {
+    animation: slideInFromRight 1s ease-in forwards;
+  }
+  
+  ul li {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  
