@@ -20,37 +20,37 @@ const Main: React.FC = () => {
 
   return (
     <section>
-      <div className="relative h-screen w-full">
+      <div className="relative md:h-screen h-72 w-full">
         {photos.map((photo: string, index: number) => (
           <div key={index}>
             <img
               src={photo}
               alt={`Photo ${index + 1}`}
-              className={`absolute h-full w-full transition-all duration-1000 ${
+              className={`absolute h-full lg:w-full transition-all duration-1000 ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
             />
-            <div className="absolute top-[50%]">
+            <div className="absolute lg:top-[50%] top-[10%]">
               <Link
                 to="mieszkania"
                 smooth={true} 
                 duration={1000}
-                className="bg-[#2f917e] text-white h-10 p-3 text-xl font-bold"
+                className="bg-[#2f917e] text-white h-10 p-3 text-xl font-bold lg:block hidden "
               >
                 Zobacz mieszkania
               </Link>
-              <div className="relative cinzel">
-                <img src={hero} alt="hero" className="xl:w-[1600px] w-full" />
-                <h1 className="absolute ml-14 text-6xl text-white top-9">
+              <div className="relative cinzel z-30 hidden md:block">
+                <img src={hero} alt="hero" className="xl:w-[1600px] w-full hidden md:block " />
+                <h1 className="absolute lg:ml-14 lg:text-6xl text-white lg:top-9 top-[30px] text-2xl">
                   Życie w w otoczeniu <br/> przyrody
                 </h1>
-                <p className="absolute ml-14  top-[180px] text-white">
+                <p className="absolute ml-14 top-[180px] text-white">
                   PRYWATNY OGRÓDEK Z PIĘKNYM WIDOKIEM
                 </p>
                 <p className="absolute ml-14 top-[230px] text-md text-white">
                   DWA MIEJSCA PARKINGOWE W CENIE
                 </p>
-                <p className="absolute ml-14 top-[280px] text-md text-white">
+                <p className="absolute ml-14 top-[340px] text-md text-white">
                   ŁATWY DOSTĘP DO CENTRUM I NAJWAŻNIEJSZYCH SZLAKÓW <br/>
                   KOMUNIKACYJNYCH
                 </p>

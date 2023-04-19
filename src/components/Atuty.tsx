@@ -5,14 +5,14 @@ import './Atuty.css'
 
 const Atuty: React.FC = () => {
   return (
-    <Element className="cinzel" name='atuty'>
-      <h1 className="text-5xl text-center my-20 text-[#2f917e] ">
+    <Element className="cinzel lg:mx-0 mx-3" name='atuty'>
+      <h1 className="lg:text-5xl text-center my-20 text-[#2f917e] text-3xl ">
         ATUTY INWESTYCJI
       </h1>
       <ul className="lg:w-1/2 w-full mx-auto">
         {atuty.map((atut) => (
-          <li className="flex my-14 items-center justify-start" key={atut.title}>
-            <div className="w-[200px] flex justify-center ">
+          <li className="flex my-14 items-center justify-start " key={atut.title}>
+            <div className="lg:w-[200px] lg:flex justify-center w-auto hidden  ">
               <img src={atut.img} alt={atut.title} className="w-fit" />
             </div>
             <div className="lg:w-3/4 w-screen">

@@ -5,10 +5,10 @@ import './Atuty.css'
 const Flats = () => {
   return (
     <Element className="cinzel w-full h-auto bg-[#2f917e]" name="mieszkania">
-      <h1 className="text-5xl text-white text-center py-10">
+      <h1 className="lg:text-5xl text-white text-center py-10 text-3xl">
         Dostępne mieszkania
       </h1>
-      <ul className="flex justify-between w-1/2  items-center text-white mx-auto">
+      <ul className="lg:flex justify-between w-1/2  items-center text-white mx-auto hidden">
         <li className="w-1/8 mx-auto">Numer</li>
         <li className="w-1/8 mx-auto">Powierzchnia</li>
         <li className="w-1/8 mx-auto">Ogródek</li>
@@ -22,7 +22,7 @@ const Flats = () => {
       </ul>
       <ul className="text-black mx-auto py-3">
         {mieszkania.map((flat) => (
-          <li className=" w-1/2 mx-auto bg-slate-50 flex justify-between py-7 my-3 items-center" key={flat.num}>
+          <li className="lg:w-1/2 mx-auto bg-slate-50 flex justify-between py-7 my-3 items-center w-full" key={flat.num}>
             <p className="w-1/8 mx-auto">{flat.num}</p>
             <p className="w-1/8 mx-auto">{flat.pow} m2</p>
             <p className="w-1/8 mx-auto">{!flat.ogrod ? "brak" : flat.ogrod}</p>
