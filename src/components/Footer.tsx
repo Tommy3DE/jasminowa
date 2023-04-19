@@ -52,7 +52,7 @@ const Footer = () => {
           </ul>
         </div>
         <div>
-          <p className="md:">Copyright © 2020 Apartamenty Jaspisowa</p>
+          <p className="lg:text-md text-sm md:text-black text-gray-400">Copyright © 2020 Apartamenty Jaspisowa</p>
         </div>
       </div>
     </footer>

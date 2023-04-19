@@ -23,7 +23,7 @@ function App() {
       <Okolica/>
       <Mapa/>
       <Aktualnosci/>
-      {/* <FormularzKontaktowy/> */}
+      <FormularzKontaktowy/>
       <Footer/>
     </div>
   )

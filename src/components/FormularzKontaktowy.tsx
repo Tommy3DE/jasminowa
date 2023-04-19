@@ -48,9 +48,9 @@ const FormularzKontaktowy = () => {
   };
 
   return (
-    <Element className="h-full w-full relative " name="kontakt">
+    <Element className="h-full w-full md:relative " name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full" />
-      <form className="cinzel bg-[#b59d32] xl:h-3/4 h-full w-1/2 flex flex-col items-start justify-center mx-auto p-10 pb-20 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 " onSubmit={handleSubmit}>
+      <form className="cinzel bg-[#b59d32] xl:h-3/4 h-screen md:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 " onSubmit={handleSubmit}>
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
@@ -59,7 +59,7 @@ const FormularzKontaktowy = () => {
         <input
           type="text"
           placeholder="Imię i Nazwisko"
-          className="placeholder:text-gray-400 p-3 w-4/5 mt-5 alegreya"
+          className="placeholder:text-gray-400 p-3 w-4/5 md:mt-5 mt-2 alegreya"
           required={true}
           ref={nameRef}
           onFocus={handleNameFocus}
@@ -71,7 +71,7 @@ const FormularzKontaktowy = () => {
         <input
           type="email"
           placeholder="Adres email"
-          className="placeholder:text-slate-400 p-3 w-4/5 mt-5 alegreya"
+          className="placeholder:text-slate-400 p-3 w-4/5 md:mt-5 mt-2 alegreya"
           required={true}
           ref={mailRef}
           onFocus={handleMailFocus}
@@ -83,7 +83,7 @@ const FormularzKontaktowy = () => {
         <input
           type="tel"
           placeholder="Telefon"
-          className="placeholder:text-slate-400 p-3 w-4/5 mt-5 alegreya"
+          className="placeholder:text-slate-400 p-3 w-4/5 md:mt-5 mt-2 alegreya"
           pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
           maxLength={9}
           required={true}
@@ -99,7 +99,7 @@ const FormularzKontaktowy = () => {
           className="placeholder:text-slate-400 p-3 w-11/12 h-40 mt-3 alegreya"
           ref={messageRef}
         />
-        <div className="flex flex-col alegreya">
+        <div className="flex flex-col alegreya text-xs md:text-md">
           <div className="px-3 mt-3">
             <input type="checkbox" required={true} />
             <span className="text-sm text-white ml-2">
@@ -132,7 +132,7 @@ const FormularzKontaktowy = () => {
         </div>
         <button
           type="submit"
-          className="bg-[#2f917e] mt-5 text-white alegreya text-xl p-3 font-bold"
+          className="bg-[#2f917e] md:mt-5 text-white alegreya text-xl p-3 font-bold mt-1"
           
         >
           Wyślij zapytanie
