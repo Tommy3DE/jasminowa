@@ -48,9 +48,9 @@ const FormularzKontaktowy = () => {
   };
 
   return (
-    <Element className="h-full w-full md:relative " name="kontakt">
-      <img src={jaspisbg} alt="bg-formularz" className="w-full h-full" />
-      <form className="cinzel bg-[#b59d32] xl:h-3/4 h-screen md:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 md:absolute md:top-1/2 md:left-1/2 md:transform md:-translate-x-1/2 md:-translate-y-1/2 " onSubmit={handleSubmit}>
+    <Element className="h-full w-full lg:relative " name="kontakt">
+      <img src={jaspisbg} alt="bg-formularz" className="w-full h-full hidden lg:block" />
+      <form className="cinzel bg-[#b59d32] xl:h-3/4 h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " onSubmit={handleSubmit}>
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
@@ -132,7 +132,7 @@ const FormularzKontaktowy = () => {
         </div>
         <button
           type="submit"
-          className="bg-[#2f917e] md:mt-5 text-white alegreya text-xl p-3 font-bold mt-1"
+          className="bg-[#2f917e] md:mt-5 text-white alegreya text-xl p-3 font-bold mt-1 mx-auto"
           
         >
           Wyślij zapytanie

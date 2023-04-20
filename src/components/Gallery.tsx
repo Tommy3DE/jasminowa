@@ -14,8 +14,8 @@ const Gallery = () => {
   return (
     <div className='flex md:flex-row flex-col flex-wrap'>
       {galleryPhotos.map((photo, index)=>(
-        <div className='md:w-1/3 w-full' key={index}>
-          <img src={photo} alt="photo" />
+        <div className='lg:w-1/3 md:w-1/2 w-full ' key={index}>
+          <img src={photo} alt="photo" className='h-full' />
         </div>
       ))}
     </div>
