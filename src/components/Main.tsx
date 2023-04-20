@@ -35,7 +35,7 @@ const Main: React.FC = () => {
                 to="mieszkania"
                 smooth={true} 
                 duration={1000}
-                className="bg-[#2f917e] text-white h-10 lg:p-3 lg:text-xl text-lg font-bold md:block hidden md:w-fit p-2 rounded-t-sm lg:rounded-none"
+                className="bg-[#2f917e] text-white h-10 lg:p-3 lg:text-xl text-lg font-bold md:block hidden md:w-fit p-2 rounded-t-sm lg:rounded-none cursor-pointer"
               >
                 Zobacz mieszkania
               </Link>
@@ -44,13 +44,13 @@ const Main: React.FC = () => {
                 <h1 className="absolute lg:ml-14 lg:text-6xl text-white lg:top-9 top-[30px] text-2xl">
                   Życie w w otoczeniu <br/> przyrody
                 </h1>
-                <p className="absolute lg:ml-14 top-[180px] md:top-[100px] md:text-sm text-white">
+                <p className="absolute lg:ml-14 xl:top-[180px] lg:top-[150px] md:top-[100px] md:text-sm lg:text-xl text-white">
                   PRYWATNY OGRÓDEK Z PIĘKNYM WIDOKIEM
                 </p>
-                <p className="absolute lg:ml-14 top-[230px] text-md md:top-[130px] md:text-sm text-white">
+                <p className="absolute lg:ml-14 xl:top-[230px] lg:top-[180px] text-md md:top-[130px] md:text-sm lg:text-xl text-white">
                   DWA MIEJSCA PARKINGOWE W CENIE
                 </p>
-                <p className="absolute lg:ml-14 top-[340px] lg:top-[280px] md:top-[160px] text-md md:text-sm text-white">
+                <p className="absolute lg:ml-14 xl:top-[280px] lg:top-[210px] md:top-[160px] text-md md:text-sm lg:text-xl text-white">
                   ŁATWY DOSTĘP DO CENTRUM I NAJWAŻNIEJSZYCH SZLAKÓW <br/>
                   KOMUNIKACYJNYCH
                 </p>

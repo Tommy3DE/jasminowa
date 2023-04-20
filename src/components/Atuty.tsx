@@ -9,10 +9,10 @@ const Atuty: React.FC = () => {
       <h1 className="lg:text-5xl text-center my-20 text-[#2f917e] text-3xl ">
         ATUTY INWESTYCJI
       </h1>
-      <ul className="lg:w-1/2 w-full mx-auto">
+      <ul className="xl:w-1/2 w-full mx-auto">
         {atuty.map((atut) => (
           <li className="flex my-14 items-center justify-start " key={atut.title}>
-            <div className="lg:w-[200px] lg:flex justify-center w-auto hidden  ">
+            <div className="lg:w-[200px] md:flex justify-center w-auto hidden pr-3 ">
               <img src={atut.img} alt={atut.title} className="w-fit" />
             </div>
             <div className="lg:w-3/4 w-screen">
