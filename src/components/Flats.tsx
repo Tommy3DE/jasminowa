@@ -44,11 +44,11 @@ const Flats = () => {
             <div className="w-[12.5%] text-center lg:block hidden">
               <p>{flat.cena ? flat.cena : "-"}</p>
             </div>
-            <div className="w-[12.5%] text-center">
+            <div className="w-[12.5%] text-center ">
               <p
                 className={`${flat.status === "Wolny" && "text-green-500"} ${
                   flat.status === "Rezerwacja" && "text-red-600"
-                } w-[12.5%]`}
+                }`}
               >
                 {flat.status}
               </p>
@@ -57,6 +57,7 @@ const Flats = () => {
               <a
                 className="text-sm  border-black border-[1px] p-1 rounded-sm atagbtn"
                 href={flat.katalog}
+                target="_blank"
               >
                 PDF
               </a>

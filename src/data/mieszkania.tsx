@@ -1,3 +1,14 @@
+import A0 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-A_parter.pdf'
+import A1 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-A_pietro.pdf'
+import B0 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-B_parter.pdf'
+import B1 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-B_pietro.pdf'
+import C0 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-C_parter.pdf'
+import C1 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-C_piętro.pdf'
+import D0 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-D_parter.pdf'
+import D1 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-D_piętro.pdf'
+import E0 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-E_parter.pdf'
+import E1 from '../assets/karty/DOMWISE-202004-KARTY_BUDYNEK-E_piętro.pdf'
+
 type Flats = {
     num: string,
     pow:  number,
@@ -18,7 +29,7 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-B_parter.pdf'
+        katalog: B0
     },
     {
         num: 'B.02',
@@ -28,7 +39,7 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 630000,
         status: 'Wolny',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-B_pietro.pdf'
+        katalog: B1
     },
     {
         num: 'A.01',
@@ -38,7 +49,7 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 0,
         status: 'Rezerwacja',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-A_parter.pdf'
+        katalog: A0
     },
     {
         num: 'A.02',
@@ -48,7 +59,7 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-A_pietro.pdf'
+        katalog: A1
     },
     {
         num: 'E.01',
@@ -58,7 +69,7 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-E_parter.pdf'
+        katalog: E0
     },
     {
         num: 'E.02',
@@ -68,7 +79,7 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-E_pietro.pdf'
+        katalog: E1
     },
     {
         num: 'D.01',
@@ -78,7 +89,7 @@ export const mieszkania:Flats[] = [
         pokoje: 3,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-D_parter.pdf'
+        katalog: D0
     },
     {
         num: 'D.02',
@@ -88,7 +99,7 @@ export const mieszkania:Flats[] = [
         pokoje: 3,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-D_pietro.pdf'
+        katalog: D1
     },
     {
         num: 'C.01',
@@ -98,7 +109,7 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-C_parter.pdf'
+        katalog: C0
     },
     {
         num: 'C.02',
@@ -108,6 +119,6 @@ export const mieszkania:Flats[] = [
         pokoje: 4,
         cena: 0,
         status: 'Sprzedany',
-        katalog: 'https://jaspisowaapartamenty.pl/wp-content/uploads/2020/02/DOMWISE-202004-KARTY_BUDYNEK-C_pietro.pdf'
+        katalog: C1
     }
 ]
