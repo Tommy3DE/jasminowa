@@ -59,7 +59,7 @@ const FormularzKontaktowy = () => {
         <input
           type="text"
           placeholder="Imię i Nazwisko"
-          className="placeholder:text-gray-400 p-3 w-4/5 md:mt-5 mt-2 alegreya"
+          className="placeholder:text-gray-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
           required={true}
           ref={nameRef}
           onFocus={handleNameFocus}
@@ -71,7 +71,7 @@ const FormularzKontaktowy = () => {
         <input
           type="email"
           placeholder="Adres email"
-          className="placeholder:text-slate-400 p-3 w-4/5 md:mt-5 mt-2 alegreya"
+          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
           required={true}
           ref={mailRef}
           onFocus={handleMailFocus}
@@ -83,7 +83,7 @@ const FormularzKontaktowy = () => {
         <input
           type="tel"
           placeholder="Telefon"
-          className="placeholder:text-slate-400 p-3 w-4/5 md:mt-5 mt-2 alegreya"
+          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
           pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
           maxLength={9}
           required={true}
@@ -96,13 +96,13 @@ const FormularzKontaktowy = () => {
       )}
         <textarea
           placeholder="Treść wiadomości"
-          className="placeholder:text-slate-400 p-3 w-11/12 h-40 mt-3 alegreya"
+          className="placeholder:text-slate-400 md:p-3 p-2 w-11/12 h-40 mt-3 alegreya "
           ref={messageRef}
         />
         <div className="flex flex-col alegreya text-xs md:text-md">
-          <div className="px-3 mt-3">
+          <div className="px-3 mt-2">
             <input type="checkbox" required={true} />
-            <span className="text-sm text-white ml-2">
+            <span className=" text-white ml-2">
               *Oświadczam, iż zapoznałem/am się z{" "}
               <a href="" className="text-blue-600">
                 Polityką prywatności.
@@ -111,7 +111,7 @@ const FormularzKontaktowy = () => {
           </div>
           <div className="px-3 mt-3">
             <input type="checkbox" />
-            <span className="text-sm text-white ml-2">
+            <span className="text-white ml-2">
               Wyrażam zgodę na przesyłanie przez Domwise Spółka z ograniczoną
               odpowiedzialnością w imieniu własnym oraz na zlecenie innych
               podmiotów informacji handlowych za pomocą środków komunikacji
@@ -121,7 +121,7 @@ const FormularzKontaktowy = () => {
           </div>
           <div className="px-3 mt-3">
             <input type="checkbox" />
-            <span className="text-sm text-white ml-2">
+            <span className="text-white ml-2">
               Wyrażam zgodę na używanie telekomunikacyjnych urządzeń końcowych,
               których jestem użytkownikiem (takich jak telefon, tablet,
               komputer) dla celów marketingu bezpośredniego przez Domwise Spółka

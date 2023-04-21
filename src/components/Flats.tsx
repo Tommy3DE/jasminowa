@@ -55,7 +55,7 @@ const Flats = () => {
             </div>
             <div className="w-[12.5%] text-center">
               <a
-                className="text-sm  border-black border-[1px] p-1 rounded-sm atagbtn"
+                className="text-sm  border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4"
                 href={flat.katalog}
                 target="_blank"
               >
