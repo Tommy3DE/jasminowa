@@ -8,16 +8,16 @@ const Flats = () => {
       <h1 className="lg:text-5xl text-white text-center py-10 text-3xl">
         Dostępne mieszkania
       </h1>
-      <ul className="lg:flex justify-between w-1/2 items-center text-white mx-auto hidden">
+      <ul className="lg:flex justify-between w-1/2 items-center text-md text-white mx-auto hidden">
         <li className="w-[12.5%] text-center">Numer</li>
-        <li className="w-[12.5%] text-center">Powierzchnia</li>
+        <li className="w-[12.5%] text-center">Pow.</li>
         <li className="w-[12.5%] text-center">Ogródek</li>
-        <li className="w-[12.5%] text-center">Kondygnacja</li>
-        <li className="w-[12.5%] text-center">Liczba pokoi</li>
+        <li className="w-[12.5%] text-center">Piętro</li>
+        <li className="w-[12.5%] text-center">Pokoje</li>
         <li className="w-[12.5%] text-center">Cena</li>
         <li className="w-[12.5%] text-center">Status</li>
         <li className="w-[12.5%] text-center">
-          Katalog do <br /> pobrania
+          Katalog 
         </li>
       </ul>
       <ul className="text-black mx-auto py-3">
