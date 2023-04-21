@@ -20,7 +20,7 @@ const Main: React.FC = () => {
 
   return (
     <section>
-      <div className="relative lg:h-screen h-72 w-full md:h-[500px]">
+      <div className="relative lg:h-screen h-[500px] w-full md:h-[500px]">
         {photos.map((photo: string, index: number) => (
           <div key={index}>
             <img
