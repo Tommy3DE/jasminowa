@@ -50,7 +50,7 @@ const FormularzKontaktowy = () => {
   return (
     <Element className="h-full w-full lg:relative " name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full hidden lg:block" />
-      <form className="cinzel bg-[#b59d32] xl:h-3/4 h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " onSubmit={handleSubmit}>
+      <form className="cinzel bg-[#b59d32] xl:h-1/2 h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " onSubmit={handleSubmit}>
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
