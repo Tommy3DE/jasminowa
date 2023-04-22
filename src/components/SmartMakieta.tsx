@@ -16,7 +16,7 @@ const smContainerStyle = {
     boxShadow: "0 5px 15px 0 rgba(0, 0, 0, 0.20)"
 }
 
- const smStyle = {
+ const smStyle: any = {
   height: "100%",
   width: "100%",
   position: "relative"
@@ -34,7 +34,7 @@ const SmartMakieta = () => {
       script.onload = () => {
         smartModelRef.current = window.SM.init(SM_GUID, 'smart-makieta', {}, {
           forceLang: 'pl',
-        })
+        }) as any
       }
       document.body.appendChild(script);
     }

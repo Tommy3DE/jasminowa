@@ -1,6 +1,7 @@
 import jaspisbg from "../assets/photos/hq/jaspishq1.jpeg";
 import { Element } from "react-scroll";
 import { FormEvent, useRef, useState } from "react";
+import emailjs from '@emailjs/browser'
 
 const FormularzKontaktowy = () => {
   const [nameFocus, setNameFocus] = useState(false)
@@ -11,6 +12,7 @@ const FormularzKontaktowy = () => {
   const mailRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null)
   const messageRef = useRef<HTMLTextAreaElement>(null);
+  const form = useRef<HTMLFormElement>(null);
 
   const handleNameFocus =()=> {
     setNameFocus(true)
@@ -37,6 +39,13 @@ const FormularzKontaktowy = () => {
     console.log(phoneRef.current?.value);
     console.log(mailRef.current?.value);
     console.log(messageRef.current?.value);
+
+    emailjs.sendForm('service_15tcpme', 'template_8h4rgfm', form.current, 'nJAj2QHQVHyayzDu9')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
     
     setNameFocus(false);
     setMailFocus(false);
@@ -50,7 +59,11 @@ const FormularzKontaktowy = () => {
   return (
     <Element className="h-full w-full lg:relative " name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full hidden lg:block" />
-      <form className="cinzel bg-[#b59d32] xl:h-1/2 h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " onSubmit={handleSubmit}>
+      <form 
+      className="cinzel bg-[#b59d32] xl:h-1/2 h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " 
+      onSubmit={handleSubmit}
+      ref={form}
+      >
         <h1 className="text-3xl text-white  mb-8">
           Zamieszkaj na <br />
           Jaspisowej
