@@ -34,27 +34,34 @@ const FormularzKontaktowy = () => {
   };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
+    e.preventDefault();
     console.log(nameRef.current?.value);
     console.log(phoneRef.current?.value);
     console.log(mailRef.current?.value);
     console.log(messageRef.current?.value);
-
-    emailjs.sendForm('service_15tcpme', 'template_8h4rgfm', form.current, 'nJAj2QHQVHyayzDu9')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
-      });
-    
-    setNameFocus(false);
-    setMailFocus(false);
-    setPhoneFocus(false);
-    nameRef.current!.value = "";
-    mailRef.current!.value = "";
-    phoneRef.current!.value = "";
-    messageRef.current!.value = "";
+  
+    if (form.current) {
+      emailjs
+        .sendForm('service_15tcpme', 'template_b2kyvu6', form.current, 'nJAj2QHQVHyayzDu9')
+        .then(
+          (result) => {
+            console.log(result.text);
+          },
+          (error) => {
+            console.log(error.text);
+          }
+        );
+  
+      setNameFocus(false);
+      setMailFocus(false);
+      setPhoneFocus(false);
+      nameRef.current!.value = '';
+      mailRef.current!.value = '';
+      phoneRef.current!.value = '';
+      messageRef.current!.value = '';
+    }
   };
+  
 
   return (
     <Element className="h-full w-full lg:relative " name="kontakt">
@@ -70,6 +77,7 @@ const FormularzKontaktowy = () => {
         </h1>
         <h2 className="text-2xl text-white">Zapraszamy do kontaktu</h2>
         <input
+          name='user_name'
           type="text"
           placeholder="Imię i Nazwisko"
           className="placeholder:text-gray-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
@@ -82,6 +90,7 @@ const FormularzKontaktowy = () => {
         <p className="text-red-500">Proszę podać imię i nazwisko.</p>
       )}
         <input
+          name='user_mail'
           type="email"
           placeholder="Adres email"
           className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
@@ -94,6 +103,7 @@ const FormularzKontaktowy = () => {
         <p className="text-red-500">Proszę podać email.</p>
       )}
         <input
+          name='user_phone'
           type="tel"
           placeholder="Telefon"
           className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
@@ -108,6 +118,7 @@ const FormularzKontaktowy = () => {
         <p className="text-red-500">Proszę podać numer telefonu.</p>
       )}
         <textarea
+          name='message'
           placeholder="Treść wiadomości"
           className="placeholder:text-slate-400 md:p-3 p-2 w-11/12 h-40 mt-3 alegreya "
           ref={messageRef}
