@@ -8,6 +8,11 @@ const FormularzKontaktowy = () => {
   const [mailFocus, setMailFocus] = useState(false)
   const [phoneFocus, setPhoneFocus] = useState(false)
 
+  // const templateKey = process.env.TEMPLATE_KEY
+  // const serviceKey = process.env.SERVICE_KEY
+  // const publicKey = process.env.PUBLIC_KEY
+
+
   const nameRef = useRef<HTMLInputElement>(null);
   const mailRef = useRef<HTMLInputElement>(null);
   const phoneRef = useRef<HTMLInputElement>(null)
@@ -64,10 +69,10 @@ const FormularzKontaktowy = () => {
   
 
   return (
-    <Element className="h-full w-full lg:relative " name="kontakt">
+    <Element className="h-full w-full lg:relative" name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full hidden lg:block" />
       <form 
-      className="cinzel bg-[#b59d32] xl:h-1/2 h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " 
+      className="cinzel bg-[#b59d32] xl:h-1/2 min-h-[800px] xl: max-h-full h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " 
       onSubmit={handleSubmit}
       ref={form}
       >
@@ -120,7 +125,7 @@ const FormularzKontaktowy = () => {
         <textarea
           name='message'
           placeholder="Treść wiadomości"
-          className="placeholder:text-slate-400 md:p-3 p-2 w-11/12 h-40 mt-3 alegreya "
+          className="placeholder:text-slate-400 md:p-3 p-2 w-11/12 h-40 mt-3 alegreya min-h-[40px] "
           ref={messageRef}
         />
         <div className="flex flex-col alegreya text-xs md:text-md">

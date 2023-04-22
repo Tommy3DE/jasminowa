@@ -20,16 +20,41 @@ const Main: React.FC = () => {
 
   return (
     <section>
-      <div className="relative lg:h-screen h-[500px] w-full md:h-[500px]">
+      <div className="relative lg:h-screen h-screen w-full md:h-[800px]">
         {photos.map((photo: string, index: number) => (
           <div key={index}>
             <img
               src={photo}
               alt={`Photo ${index + 1}`}
-              className={`absolute h-full w-full transition-all duration-1000 ${
+              className={`absolute md:h-full h-screen w-full transition-all duration-1000 md:object-fill object-none ${
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
-            />
+              />
+            <div className=" text-white md:hidden block w-full absolute top-[50%] py-4 my-2 z-50">
+              <div>
+                <Link
+                  to="mieszkania"
+                  smooth={true}
+                  duration={1000}
+                  className="bg-[#2f917e] bg-opacity-80 text-white h-10 p-2 pb-1 text-lg cursor-pointer font-sans font-bold "
+                >
+                  Zobacz mieszkania
+                </Link>
+              </div>
+              <div className=" bg-[#2f917e] cinzel bg-opacity-80 ">
+                <h1 className="ml-2 text-4xl py-2">
+                  Życie w <br /> otoczeniu <br /> przyrody
+                </h1>
+                <p className="ml-2 text-sm py-2">
+                  PRYWATNY OGRÓDEK Z PIĘKNYM WIDOKIEM
+                </p>
+                <p className="ml-2 text-sm py-2">DWA MIEJSCA PARKINGOWE W CENIE</p>
+                <p className="ml-2 text-sm py-2">
+                  ŁATWY DOSTĘP DO CENTRUM I NAJWAŻNIEJSZYCH SZLAKÓW
+                  KOMUNIKACYJNYCH
+                </p>
+              </div>
+            </div>
             <div className="absolute lg:top-[50%] top-[10%] md:top-[40%]">
               <Link
                 to="mieszkania"

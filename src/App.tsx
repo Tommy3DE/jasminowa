@@ -12,6 +12,7 @@ import FormularzKontaktowy from './components/FormularzKontaktowy'
 import Mapa from './components/Mapa'
 
 function App() {
+
   return (
     <div>
       <Navbar/>

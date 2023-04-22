@@ -12,7 +12,7 @@ const Atuty: React.FC = () => {
       <ul className="xl:w-1/2 w-full mx-auto">
         {atuty.map((atut) => (
           <li className="flex my-14 items-center justify-start " key={atut.title}>
-            <div className="lg:w-[200px] md:flex justify-center w-auto hidden pr-3 ">
+            <div className="lg:w-[200px] flex justify-center w-auto pr-3 min-w-[80px]">
               <img src={atut.img} alt={atut.title} className="w-fit" />
             </div>
             <div className="lg:w-3/4 w-screen">
