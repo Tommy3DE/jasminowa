@@ -30,7 +30,7 @@ const Main: React.FC = () => {
                 index === currentIndex ? "opacity-100" : "opacity-0"
               }`}
               />
-            <div className=" text-white md:hidden block w-full absolute top-[50%] py-4 my-2 z-50">
+            <div className=" text-white md:hidden block w-full absolute top-[50%] py-4 my-2 z-10">
               <div>
                 <Link
                   to="mieszkania"

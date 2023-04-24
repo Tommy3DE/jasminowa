@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import "../App.css";
 const Navbar = () => {
   return (
-    <nav className="fixed bg-white z-50 shadow-md w-full m-auto alegreya">
+    <nav className="fixed bg-white shadow-md w-full m-auto alegreya z-50">
       <div className="flex justify-evenly h-[100px] lg:w-[60%] m-auto w-full">
         <img
           src={logo}
