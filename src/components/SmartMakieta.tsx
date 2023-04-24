@@ -21,6 +21,7 @@ const smContainerStyle = {
   width: "100%",
   position: "relative"
  }
+ const win: any = window;
 
 const SmartMakieta = () => {
   const viewerRef = useRef(null);
@@ -32,9 +33,9 @@ const SmartMakieta = () => {
       script.src = 'https://3destatesmartmakietaemb.z6.web.core.windows.net/v1/js/main.js';
       script.async = true;
       script.onload = () => {
-        smartModelRef.current = window.SM.init(SM_GUID, 'smart-makieta', {}, {
+        smartModelRef.current = win.SM.init(SM_GUID, 'smart-makieta', {}, {
           forceLang: 'pl',
-        }) as any
+        })
       }
       document.body.appendChild(script);
     }
