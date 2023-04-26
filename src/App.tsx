@@ -16,7 +16,7 @@ function App() {
 
   return (
     <div>
-      {/* <Navbar/>
+      <Navbar/>
       <Main/>
       <Atuty/>
       <Gallery/>
@@ -26,8 +26,8 @@ function App() {
       <Mapa/>
       <Aktualnosci/>
       <FormularzKontaktowy/>
-      <Footer/> */}
-      <Prywatnosc />
+      <Footer/>
+      {/* <Prywatnosc /> */}
     </div>
   )
 }
