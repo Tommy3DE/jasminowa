@@ -10,12 +10,13 @@ import Aktualnosci from './components/Aktualnosci'
 import './App.css'
 import FormularzKontaktowy from './components/FormularzKontaktowy'
 import Mapa from './components/Mapa'
+import Prywatnosc from './components/substrony/Prywatnosc'
 
 function App() {
 
   return (
     <div>
-      <Navbar/>
+      {/* <Navbar/>
       <Main/>
       <Atuty/>
       <Gallery/>
@@ -25,7 +26,8 @@ function App() {
       <Mapa/>
       <Aktualnosci/>
       <FormularzKontaktowy/>
-      <Footer/>
+      <Footer/> */}
+      <Prywatnosc />
     </div>
   )
 }
