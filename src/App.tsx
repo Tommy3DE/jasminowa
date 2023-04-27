@@ -27,7 +27,7 @@ function App() {
       <Aktualnosci/>
       <FormularzKontaktowy/>
       <Footer/>
-      {/* <Prywatnosc /> */}
+      {/* <Prywatnosc/> */}
     </div>
   )
 }
