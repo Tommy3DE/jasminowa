@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import jaspisowabg2 from "../../assets/photos/hq/jaspishq2.jpg";
 const Przetwarzanie: React.FunctionComponent = () => {
   return (
-    <section className="flex w-full h-screen flex-col justify-between alegreya">
+    <section className="flex w-full  flex-col justify-between alegreya h-fit">
       <Navbar />
       <div className="h-1/3">
         <img
@@ -16,7 +16,7 @@ const Przetwarzanie: React.FunctionComponent = () => {
         </h1>
       </div>
 
-      <div className="w-1/2 h-[950px] mx-auto overflow-auto mt-0">
+      <div className="lg:w-1/2 w-full  h-auto mx-auto  overflow-visible px-1 md:mt-[300px] mt-[200px]">
         <h3 className="text-lg font-bold">
           Kto jest administratorem Twoich danych osobowych?{" "}
         </h3>

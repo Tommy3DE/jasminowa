@@ -3,7 +3,7 @@ import Navbar from "../Navbar";
 import jaspisowabg from "../../assets/photos/hq/jaspishq1.jpeg";
 const Prywatnosc:React.FunctionComponent = () => {
   return (
-    <section className="flex w-full h-screen flex-col justify-between alegreya">
+    <section className="flex w-full  flex-col justify-between alegreya h-fit">
       <Navbar />
       <div className="h-1/3">
         <img
@@ -16,7 +16,7 @@ const Prywatnosc:React.FunctionComponent = () => {
         </h1>
       </div>
 
-      <div className="w-1/2 h-[750px] mx-auto overflow-auto mt-0">
+      <div className="lg:w-1/2 w-full  h-auto mx-auto  overflow-visible px-1 mt-[300px]">
         <h3 className="text-lg font-bold">Informacje wstępne:</h3>
         <p>
           Platforma internetowa www.jaspisowaapartamenty.pl została Państwu

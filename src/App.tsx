@@ -28,8 +28,8 @@ function App() {
       <Aktualnosci/>
       <FormularzKontaktowy/>
       <Footer/>
-      {/* <Prywatnosc/>
-      <Przetwarzanie/> */}
+      {/* <Prywatnosc/> */}
+      {/* <Przetwarzanie/> */}
     </div>
   )
 }
