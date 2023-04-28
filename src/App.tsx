@@ -7,16 +7,17 @@ import Navbar from './components/Navbar'
 import SmartMakieta from './components/SmartMakieta'
 import Okolica from './components/Okolica'
 import Aktualnosci from './components/Aktualnosci'
-import './App.css'
 import FormularzKontaktowy from './components/FormularzKontaktowy'
 import Mapa from './components/Mapa'
 import Prywatnosc from './components/substrony/Prywatnosc'
+import Przetwarzanie from './components/substrony/Przetwarzanie'
+import './App.css'
 
 function App() {
 
   return (
     <div>
-      {/* <Navbar/>
+      <Navbar/>
       <Main/>
       <Atuty/>
       <Gallery/>
@@ -26,8 +27,9 @@ function App() {
       <Mapa/>
       <Aktualnosci/>
       <FormularzKontaktowy/>
-      <Footer/> */}
-      <Prywatnosc/>
+      <Footer/>
+      {/* <Prywatnosc/>
+      <Przetwarzanie/> */}
     </div>
   )
 }

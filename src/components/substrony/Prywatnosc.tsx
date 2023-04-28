@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../Navbar";
 import jaspisowabg from "../../assets/photos/hq/jaspishq1.jpeg";
-const Prywatnosc = () => {
+const Prywatnosc:React.FunctionComponent = () => {
   return (
     <section className="flex w-full h-screen flex-col justify-between alegreya">
       <Navbar />
@@ -102,7 +102,7 @@ const Prywatnosc = () => {
           Twoje dane osobowe będą przetwarzane do czasu cofnięcia zgody lub
           przez okres niezbędny do ustalenia, dochodzenia lub obrony roszczeń.
         </p>
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-lg font-bold">
           Czy przetwarzamy Twoje dane w sposób zautomatyzowany?
         </h3>
         <p>
@@ -118,7 +118,7 @@ const Prywatnosc = () => {
           zautomatyzowany znajduje się w Polityce plików cookies znajdującej się
           na naszej stronie internetowej.
         </p>
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-lg font-bold">
           Kto może być odbiorcą Twoich danych osobowych?
         </h3>
         <p>
@@ -131,7 +131,7 @@ const Prywatnosc = () => {
           uprawnione do otrzymania Twoich danych osobowych na podstawie
           przepisów prawa (np. urząd skarbowy, policja, sąd).
         </p>
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-lg font-bold">
           Jaki jest okres przechowywania przez nas Twoich danych osobowych?
         </h3>
         <p>
@@ -153,7 +153,7 @@ const Prywatnosc = () => {
           osobę, której dane dotyczą lub przez okres niezbędny do ustalenia,
           dochodzenia lub obrony roszczeń.
         </p>
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-lg font-bold">
           Czy dane osobowe będą przekazywane poza obszar EOG?
         </h3>
         <p>
@@ -164,7 +164,7 @@ const Prywatnosc = () => {
           oraz o możliwości ich blokowania przeczytasz w naszej Polityce plików
           cookies.
         </p>
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-lg font-bold">
           Czy podanie Twoich danych osobowych jest obowiązkowe?
         </h3>
         <p>
@@ -174,20 +174,20 @@ const Prywatnosc = () => {
           i realizacji umowy może skutkować odmową zawarcia umowy i jej
           wykonania.
         </p>
-        <h3 className="text-lg font-semibold">
+        <h3 className="text-lg font-bold">
           Jakie masz uprawnienia dotyczące przetwarzanych przez nas danych
           osobowych?
         </h3>
         <p>
           Masz prawo{" "}
-          <span className="font-semibold">
+          <span className="font-bold">
             dostępu do swoich danych osobowych
           </span>
           , a także prawo do ich{" "}
-          <span className="font-semibold">sprostowania i ograniczenia</span>{" "}
+          <span className="font-bold">sprostowania i ograniczenia</span>{" "}
           przetwarzania danych osobowych. <br />
           Masz prawo do usunięcia swoich danych osobowych (czyli tzw.{" "}
-          <span className="font-semibold">prawo do bycia zapomnianym</span>) – w
+          <span className="font-bold">prawo do bycia zapomnianym</span>) – w
           niektórych sytuacjach masz prawo do usunięcia wszystkich danych
           osobowych z naszej platformy. Dotyczy to m.in. przypadku, gdy Twoje
           dane osobowe są przetwarzane niezgodnie z prawem lub w sytuacji
@@ -197,12 +197,12 @@ const Prywatnosc = () => {
           wynika z realizacji obowiązków wynikających z przepisów prawa, a
           także, gdy przetwarzanie jest niezbędne do dochodzenia lub obrony
           roszczeń. <br />
-          Masz prawo <span className="font-semibold">sprzeciwu</span> –prawo do
+          Masz prawo <span className="font-bold">sprzeciwu</span> –prawo do
           żądania wstrzymania przetwarzania danych osobowych. Prawo to
           przysługuje tylko w przypadku, gdy przetwarzanie danych odbywa się na
           podstawie uzasadnionego interesu administratora lub osoby trzeciej,
           dotyczy to również profilowania. <br />
-          Masz prawo <span className="font-semibold">przenoszenia</span> danych
+          Masz prawo <span className="font-bold">przenoszenia</span> danych
           osobowych – to prawo przysługuje tylko w przypadku, gdy przetwarzanie
           przez nas danych osobowych odbywa się w związku z zawartą umową lub
           wyrażoną zgodą. Poprzez realizację tego prawa możesz otrzymać od
@@ -212,7 +212,7 @@ const Prywatnosc = () => {
           warunkiem, iż istnieją w tym zakresie techniczne możliwości zarówno po
           stronie Administratora, jak też innego podmiotu, któremu chcesz
           dostarczyć dane. Masz prawo złożenia{" "}
-          <span className="font-semibold">skargi</span> do Prezesa Urzędu
+          <span className="font-bold">skargi</span> do Prezesa Urzędu
           Ochrony Danych Osobowych – przysługuje w sytuacji podejrzenia
           naruszenia przepisów dotyczących ochrony danych osobowych
         </p>
