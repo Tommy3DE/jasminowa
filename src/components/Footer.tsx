@@ -1,6 +1,8 @@
 import logo from "../assets/logo.png";
 import { Link } from "react-scroll";
 import "../App.css";
+import NavLinks from "./NavLinks";
+
 const Footer = () => {
   return (
     <footer className="w-full m-auto alegreya">
@@ -40,21 +42,7 @@ const Footer = () => {
         </a>
         <a href="tel:516 735 753">tel. 516 735 753</a>
       </section>
-      <div className="flex lg:flex-row flex-col justify-between md:mx-2 mx-0 lg:mx-auto w-full lg:w-1/2 mb-10">
-        <div>
-          <ul className="flex text-[#2f917e] lg:justify-start justify-between mx-3 items-center text-[15px] uppercase font-bold ">
-            <li className="hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[17px] mr-4 w-2/5">
-              <a href="https://jaspisowaapartamenty.pl/polityka-prywatnosci/">POLITYKA PRYWATNOŚCI</a>
-            </li>
-            <li className="hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[17px] w-2/5">
-              <a href="https://jaspisowaapartamenty.pl/ogolna-informacja-o-przetwarzaniu-danych-osobowych/">PRZETWARZANIE DANYCH OSOBOWYCH</a>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <p className="lg:text-md text-[15px] md:text-black text-gray-400 mt-5 text-center">Copyright © 2020 Apartamenty Jaspisowa</p>
-        </div>
-      </div>
+      <NavLinks/>
     </footer>
   );
 };
