@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "../Navbar";
 import jaspisowabg2 from "../../assets/photos/hq/jaspishq2.jpg";
+import SubNav from "./SubNav";
 const Przetwarzanie: React.FunctionComponent = () => {
   return (
     <section className="flex w-full  flex-col justify-between alegreya h-fit">
-      <Navbar />
+      <SubNav />
       <div className="h-1/3">
         <img
           className="w-full h-[500px] object-cover pt-[100px]"

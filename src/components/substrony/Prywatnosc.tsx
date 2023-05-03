@@ -1,10 +1,14 @@
 import React from "react";
-import Navbar from "../Navbar";
+
 import jaspisowabg from "../../assets/photos/hq/jaspishq1.jpeg";
+import { Link } from "react-router-dom";
+import SubNav from "./SubNav";
+
+
 const Prywatnosc:React.FunctionComponent = () => {
   return (
     <section className="flex w-full  flex-col justify-between alegreya h-fit">
-      <Navbar />
+      <SubNav />
       <div className="h-1/3">
         <img
           className="w-full h-[700px] object-cover pt-[100px]"
