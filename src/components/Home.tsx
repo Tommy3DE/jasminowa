@@ -19,8 +19,8 @@ const Home = () => {
       <Main/>
       <Atuty/>
       <Gallery/>
-      <Flats/>
-      {/* <FlatsNew/> */}
+      {/* <Flats/> */}
+      <FlatsNew/>
       <SmartMakieta/>
       <Okolica/>
       <Mapa/>

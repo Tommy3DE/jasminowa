@@ -25,7 +25,7 @@ type Flats = {
     ttdh: string
 }
 
-export const mieszkania:Flats[] = [
+export const noweMieszkania:Flats[] = [
     {
         num: '97A/1',
         pow:  74.45,
@@ -33,7 +33,7 @@ export const mieszkania:Flats[] = [
         budynek: 2,
         kondygnacja: 3,
         pokoje: 4,
-        status: 'Sprzedany',
+        status: 'Sprzedane',
         rzut: m97A1,
         spacer: 'https://tours.3destate.pl/3d-estate---przyklady-spacerow/1.3d',
         ttdh: 'https://360.3destate.pl/3d-estate---przyklady-spacerow/1?hideDarkModeButton=true'
@@ -45,7 +45,7 @@ export const mieszkania:Flats[] = [
         budynek: 2,
         kondygnacja: 4,
         pokoje: 4,
-        status: 'Wolny',
+        status: 'Wolne',
         rzut: m97A10,
         spacer: 'https://tours.3destate.pl/3d-estate---przyklady-spacerow/2.3d',
         ttdh: 'https://360.3destate.pl/3d-estate---przyklady-spacerow/2?hideDarkModeButton=true'
@@ -57,7 +57,7 @@ export const mieszkania:Flats[] = [
         budynek: 1,
         kondygnacja: 0,
         pokoje: 3,
-        status: 'Wolny',
+        status: 'Wolne',
         rzut: mA001,
         spacer: 'https://tours.3destate.pl/3d-estate---przyklady-spacerow/3.3d',
         ttdh: 'https://360.3destate.pl/3d-estate---przyklady-spacerow/3?hideDarkModeButton=true'
@@ -69,7 +69,7 @@ export const mieszkania:Flats[] = [
         budynek: 3,
         kondygnacja: 0,
         pokoje: 3,
-        status: 'Wolny',
+        status: 'Wolne',
         rzut: mB0A8,
         spacer: 'https://tours.3destate.pl/3d-estate---przyklady-spacerow/4.3d',
         ttdh: 'https://360.3destate.pl/3d-estate---przyklady-spacerow/4?hideDarkModeButton=true'
@@ -129,7 +129,7 @@ export const mieszkania:Flats[] = [
         budynek: 1,
         kondygnacja: 0,
         pokoje: 3,
-        status: 'Sprzedany',
+        status: 'Sprzedane',
         rzut: mMA03,
         spacer: 'https://tours.3destate.pl/3d-estate---przyklady-spacerow/9.3d',
         ttdh: 'https://360.3destate.pl/3d-estate---przyklady-spacerow/9?hideDarkModeButton=true'

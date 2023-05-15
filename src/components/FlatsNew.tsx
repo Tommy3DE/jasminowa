@@ -1,5 +1,5 @@
 import React from "react";
-import { mieszkania } from "../data/mieszkania";
+import { noweMieszkania } from "../data/noweMieszkania";
 import { Element } from "react-scroll";
 import "./Atuty.css";
 const FlatsNew = () => {
@@ -14,7 +14,6 @@ const FlatsNew = () => {
         <li className="w-[12.5%] text-center">Ogródek</li>
         <li className="w-[12.5%] text-center">Piętro</li>
         <li className="w-[12.5%] text-center">Pokoje</li>
-        <li className="w-[12.5%] text-center">Cena</li>
         <li className="w-[12.5%] text-center">Status</li>
         <li className="w-[12.5%] text-center">
           Katalog 
@@ -24,7 +23,7 @@ const FlatsNew = () => {
         </li>
       </ul>
       <ul className="text-black mx-auto py-3">
-        {mieszkania.map((flat) => (
+        {noweMieszkania.map((flat) => (
           <li
             className="lg:w-1/2 mx-auto bg-slate-50 flex lg:justify-between justify-evenly sm:justify-between py-7 my-3 items-center w-full md:text-md text-xs lg:text-lg"
             key={flat.num}
@@ -36,22 +35,23 @@ const FlatsNew = () => {
               <p>{flat.pow} m²</p>
             </div>
             <div className="w-[12.5%] text-center">
-              <p>{!flat.ogrod ? "brak" : flat.ogrod}</p>
+              <p>{!flat.ogrod ? "brak" : flat.ogrod + ' m²'}</p>
             </div>
             <div className="w-[12.5%] text-center">
-              <p>{flat.kondygnacja === 0 ? "Parter" : "Piętro"}</p>
+              <p>{flat.kondygnacja}</p>
             </div>
             <div className="w-[12.5%] text-center">
               <p>{flat.pokoje}</p>
             </div>
-            <div className="w-[12.5%] text-center lg:block hidden">
-              <p>{flat.cena ? flat.cena : "-"}</p>
-            </div>
+            
             <div className="w-[12.5%] text-center ">
               <p
-                className={`${flat.status === "Wolny" && "text-green-500"} ${
-                  flat.status === "Rezerwacja" && "text-red-600"
-                }`}
+                className={`${flat.status === "Wolne" && "text-green-500"} ${
+                  flat.status === "Sprzedane" && "text-red-600"
+                } ${
+                  `${flat.status === "Rezerwacja" && "text-yellow-500"}`
+                }
+                `}
               >
                 {flat.status}
               </p>
@@ -59,10 +59,19 @@ const FlatsNew = () => {
             <div className="w-[12.5%] text-center">
               <a
                 className="text-sm  border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4"
-                href={flat.katalog}
+                href={flat.rzut}
                 target="_blank"
               >
-                PDF
+                Rzut
+              </a>
+            </div>
+            <div className="w-[12.5%] text-center">
+              <a
+                className="text-sm border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4"
+                href={flat.spacer}
+                target="_blank"
+              >
+                Spacer
               </a>
             </div>
           </li>
