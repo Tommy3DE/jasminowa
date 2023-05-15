@@ -10,6 +10,7 @@ import Okolica from './Okolica'
 import Aktualnosci from './Aktualnosci'
 import FormularzKontaktowy from './FormularzKontaktowy'
 import Mapa from './Mapa'
+import FlatsNew from './FlatsNew'
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Atuty/>
       <Gallery/>
       <Flats/>
+      {/* <FlatsNew/> */}
       <SmartMakieta/>
       <Okolica/>
       <Mapa/>

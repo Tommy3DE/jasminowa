@@ -2,7 +2,7 @@ import React from "react";
 import { mieszkania } from "../data/mieszkania";
 import { Element } from "react-scroll";
 import "./Atuty.css";
-const Flats = () => {
+const FlatsNew = () => {
   return (
     <Element className="cinzel w-full h-auto bg-[#2f917e]" name="mieszkania">
       <h1 className="lg:text-5xl text-white text-center py-10 text-3xl">
@@ -18,6 +18,9 @@ const Flats = () => {
         <li className="w-[12.5%] text-center">Status</li>
         <li className="w-[12.5%] text-center">
           Katalog 
+        </li>
+        <li className="w-[12.5%] text-center">
+          Spacer 3D 
         </li>
       </ul>
       <ul className="text-black mx-auto py-3">
@@ -69,4 +72,4 @@ const Flats = () => {
   );
 };
 
-export default Flats;
+export default FlatsNew;
