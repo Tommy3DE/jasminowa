@@ -1,4 +1,4 @@
-import React from 'react'
+
 import Atuty from './Atuty'
 import Flats from './Flats'
 import Footer from './Footer'
