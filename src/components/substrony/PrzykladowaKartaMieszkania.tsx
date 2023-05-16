@@ -1,11 +1,13 @@
 import SubNav from "./SubNav";
 import { noweMieszkania } from "../../data/noweMieszkania";
 import { useState } from "react";
+import spacerPlaceholder from '../../assets/3dplaceholder.png'
 export const PrzykladowaKartaMieszkania = () => {
   const [activeButton, setActiveButton] = useState(0);
   const handleClick = (index: number) => {
     setActiveButton(index);
   };
+
   return (
     <section>
       <SubNav />
@@ -27,11 +29,11 @@ export const PrzykladowaKartaMieszkania = () => {
             </div>
           </div>
         </div>
-        <div className="h-full w-1/2 bg-slate-400">
+        <div className="h-full w-1/2 border">
           <div className="h-auto w-full bg-white flex text-2xl justify-evenly">
             <button
               className={`border w-1/3 py-3 items-center text-center ${
-                activeButton === 0 ? "bg-yellow-500" : ""
+                activeButton === 0 ? "bg-[#2f917e] text-white" : "bg-gray-200"
               }`}
               onClick={() => handleClick(0)}
             >
@@ -39,7 +41,7 @@ export const PrzykladowaKartaMieszkania = () => {
             </button>
             <button
               className={`border w-1/3 py-3 items-center text-center ${
-                activeButton === 1 ? "bg-yellow-500" : ""
+                activeButton === 1 ? "bg-[#2f917e] text-white" : "bg-gray-200"
               }`}
               onClick={() => handleClick(1)}
             >
@@ -47,19 +49,29 @@ export const PrzykladowaKartaMieszkania = () => {
             </button>
             <button
               className={`border w-1/3 py-3 items-center text-center ${
-                activeButton === 2 ? "bg-yellow-500" : ""
+                activeButton === 2 ? "bg-[#2f917e] text-white" : "bg-gray-200"
               }`}
               onClick={() => handleClick(2)}
             >
-              Rzut 3D
+              Rzut 2D
             </button>
           </div>
-          <iframe
-            src={noweMieszkania[0].ttdh}
-            height={1300}
-            width={600}
-            className="w-full"
-          />
+          {activeButton === 0 && (
+            <iframe
+              src={noweMieszkania[0].ttdh}
+              height={1300}
+              width={600}
+              className="w-full"
+            />
+          )}
+          {activeButton === 1 && (
+            <a href={noweMieszkania[0].spacer} target="_blank">
+                <img src={spacerPlaceholder} alt="3destate spacer" className="w-full h-full" />
+            </a>
+          )}
+          {activeButton === 2 && (
+            <img src={noweMieszkania[0].rzut} alt="rzut2d" className="h-[90%] mx-auto" />
+          )}
         </div>
       </div>
     </section>
