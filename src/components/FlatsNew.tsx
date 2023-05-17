@@ -1,6 +1,7 @@
 import React from "react";
 import { noweMieszkania } from "../data/noweMieszkania";
 import { Element } from "react-scroll";
+import { Link } from "react-router-dom";
 import "./Atuty.css";
 const FlatsNew = () => {
   return (
@@ -65,15 +66,11 @@ const FlatsNew = () => {
                 Rzut
               </a>
             </div>
-            <div className="w-[12.5%] text-center">
-              <a
-                className="text-sm border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4"
-                href={flat.spacer}
-                target="_blank"
-              >
-                Spacer
-              </a>
-            </div>
+            <Link className="w-[12.5%] text-center" to={`/${flat.num}`}>
+              <p className="text-sm  border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4">
+                Więcej
+              </p>
+            </Link>
           </li>
         ))}
       </ul>

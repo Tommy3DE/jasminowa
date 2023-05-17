@@ -12,7 +12,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/prywatnosc" element={<Prywatnosc />} />
           <Route path="/przetwarzanie" element={<Przetwarzanie />} />
-          <Route path='/mieszkanie' element={<PrzykladowaKartaMieszkania/>} />
+          <Route path='/:num' element={<PrzykladowaKartaMieszkania/>} />
         </Routes>
     </Router>
   );
