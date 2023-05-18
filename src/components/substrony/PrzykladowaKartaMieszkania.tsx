@@ -4,8 +4,10 @@ import { useState } from "react";
 import spacerPlaceholder from "../../assets/3dplaceholder.png";
 import FormularzKontaktowy from "../FormularzKontaktowy";
 import { Link } from "react-scroll";
+import { useParams } from "react-router-dom";
 
 export const PrzykladowaKartaMieszkania = () => {
+  // let {num, status, budynek, pokoje, pow, kondygnacja, ogrod, rzut, spacer, ttdh} = useParams()
   const [activeButton, setActiveButton] = useState(0);
   const handleClick = (index: number) => {
     setActiveButton(index);
@@ -14,9 +16,9 @@ export const PrzykladowaKartaMieszkania = () => {
   return (
     <section>
       <SubNav />
-      <div className="flex w-full h-screen cinzel pt-[100px]">
-        <div className="h-full w-1/2">
-          <div className="mt-14 ml-14">
+      <div className="flex w-full lg:h-screen h-auto cinzel pt-[100px] flex-col lg:flex-row">
+        <div className="h-full lg:w-1/2 ">
+          <div className="lg:mt-14 lg:ml-14">
             <h3 className="text-lg">Osiedle Jaspisowa</h3>
             <h1 className="text-4xl font-extrabold">
               Mieszkanie {noweMieszkania[0].num}
@@ -24,8 +26,8 @@ export const PrzykladowaKartaMieszkania = () => {
             <h2 className="text-xl pt-4 pb-2">
               Dostępność: {noweMieszkania[0].status}
             </h2>
-            <div className="border-2 flex flex-row w-8/12 text-lg">
-              <ul className="w-8/12 font-bold">
+            <div className="border-2 flex flex-row lg:w-8/12 w-full text-lg">
+              <ul className="lg:w-8/12 w-full font-bold">
                 <li className="border p-1">Numer mieszkania</li>
                 <li className="border p-1 bg-gray-100">Metraż</li>
                 <li className="border p-1">Budynek</li>
@@ -49,18 +51,18 @@ export const PrzykladowaKartaMieszkania = () => {
               </ul>
             </div>
             <Link to="kontakt" smooth={true} duration={1500}>
-            <button className="w-8/12 bg-[#2f917e] py-2 text-white text-lg my-4 hover:bg-slate-600">
+            <button className="lg:w-8/12 w-full bg-[#2f917e] py-2 text-white text-lg my-4 hover:bg-slate-600">
               Zapytaj o mieszkanie
             </button>
             </Link>
             <a href={noweMieszkania[0].rzut} download={true}>
-              <button className="w-8/12 bg-gray-400 py-2 text-white text-lg hover:bg-slate-600">
+              <button className="lg:w-8/12 w-full bg-gray-400 py-2 text-white text-lg hover:bg-slate-600">
                 Pobierz rzut 2D
               </button>
             </a>
           </div>
         </div>
-        <div className="h-full w-1/2 border">
+        <div className="lg:h-full lg:w-1/2 border">
           <div className="h-auto w-full bg-white flex text-2xl justify-evenly">
             <button
               className={`border w-1/3 py-3 items-center text-center ${
@@ -108,7 +110,7 @@ export const PrzykladowaKartaMieszkania = () => {
             <img
               src={noweMieszkania[0].rzut}
               alt="rzut2d"
-              className="h-[90%] mx-auto"
+              className="lg:h-[90%] mx-auto h-auto"
             />
           )}
         </div>
