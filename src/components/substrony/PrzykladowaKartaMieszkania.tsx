@@ -63,7 +63,7 @@ export const PrzykladowaKartaMieszkania = () => {
           </div>
         </div>
         <div className="lg:h-full lg:w-1/2 border">
-          <div className="h-auto w-full bg-white flex text-2xl justify-evenly">
+          <div className="h-auto w-full bg-white flex lg:text-2xl justify-evenly">
             <button
               className={`border w-1/3 py-3 items-center text-center ${
                 activeButton === 0 ? "bg-[#2f917e] text-white" : "bg-gray-200"
@@ -94,7 +94,7 @@ export const PrzykladowaKartaMieszkania = () => {
               src={noweMieszkania[0].ttdh}
               height={1300}
               width={600}
-              className="w-full"
+              className="w-full h-96"
             />
           )}
           {activeButton === 1 && (
