@@ -20,7 +20,7 @@ const FlatsNew = () => {
           Katalog 
         </li>
         <li className="w-[12.5%] text-center">
-          Spacer 3D 
+          Więcej
         </li>
       </ul>
       <ul className="text-black mx-auto py-3">
@@ -67,7 +67,7 @@ const FlatsNew = () => {
               </a>
             </div>
             <Link className="w-[12.5%] text-center" to={`/${flat.num}`}>
-              <p className="text-sm  border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4">
+              <p className="text-sm  border-black border-[1px] md:py-1 rounded-sm atagbtn ml-4">
                 Więcej
               </p>
             </Link>

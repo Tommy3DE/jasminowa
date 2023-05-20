@@ -94,7 +94,7 @@ export const PrzykladowaKartaMieszkania = () => {
               src={noweMieszkania[0].ttdh}
               height={1300}
               width={600}
-              className="w-full h-96"
+              className="w-full lg:h-[90%] h-96"
             />
           )}
           {activeButton === 1 && (
