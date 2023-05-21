@@ -1,17 +1,40 @@
 import SubNav from "./SubNav";
 import { noweMieszkania } from "../../data/noweMieszkania";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import spacerPlaceholder from "../../assets/3dplaceholder.png";
 import FormularzKontaktowy from "../FormularzKontaktowy";
 import { Link } from "react-scroll";
 import { useParams } from "react-router-dom";
 
+
 export const PrzykladowaKartaMieszkania = () => {
-  // let {num, status, budynek, pokoje, pow, kondygnacja, ogrod, rzut, spacer, ttdh} = useParams()
+  let { num } = useParams();
+  type FlatType = {
+    num: number;
+    status: string;
+    budynek: string;
+    pokoje: number;
+    pow: number;
+    kondygnacja: number;
+    ogrod: number;
+    rzut: string;
+    spacer: string;
+    ttdh: string;
+  };
+  
+  const [flatData, setFlatData] = useState<FlatType | undefined>(undefined);
+  
   const [activeButton, setActiveButton] = useState(0);
   const handleClick = (index: number) => {
     setActiveButton(index);
   };
+  
+  useEffect(() => {
+
+    const flat:FlatType = noweMieszkania.find(flat => flat.num === num);
+    setFlatData(flat);
+  
+  }, [num]);
 
   return (
     <section>
@@ -21,7 +44,7 @@ export const PrzykladowaKartaMieszkania = () => {
           <div className="lg:mt-14 lg:ml-14">
             <h3 className="text-lg">Osiedle Jaspisowa</h3>
             <h1 className="text-4xl font-extrabold">
-              Mieszkanie {noweMieszkania[0].num}
+              Mieszkanie {flatData.num}
             </h1>
             <h2 className="text-xl pt-4 pb-2">
               Dostępność: {noweMieszkania[0].status}
