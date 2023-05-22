@@ -10,9 +10,9 @@ import { useParams } from "react-router-dom";
 export const PrzykladowaKartaMieszkania = () => {
   let { num } = useParams();
   type FlatType = {
-    num: number;
+    num: string;
     status: string;
-    budynek: string;
+    budynek: number;
     pokoje: number;
     pow: number;
     kondygnacja: number;
@@ -28,18 +28,18 @@ export const PrzykladowaKartaMieszkania = () => {
   const handleClick = (index: number) => {
     setActiveButton(index);
   };
-  
-  useEffect(() => {
 
-    const flat:FlatType = noweMieszkania.find(flat => flat.num === num);
-    setFlatData(flat);
-  
-  }, [num]);
+  useEffect(() => {
+    const flat: FlatType | undefined = noweMieszkania.find(flat => flat.num === num);
+    if(flat){
+      setFlatData(flat);
+  }
+}, [num]);
 
   return (
     <section>
       <SubNav />
-      <div className="flex w-full lg:h-screen h-auto cinzel pt-[100px] flex-col lg:flex-row">
+      {flatData && (<div className="flex w-full lg:h-screen h-auto cinzel pt-[100px] flex-col lg:flex-row">
         <div className="h-full lg:w-1/2 ">
           <div className="lg:mt-14 lg:ml-14">
             <h3 className="text-lg">Osiedle Jaspisowa</h3>
@@ -47,7 +47,7 @@ export const PrzykladowaKartaMieszkania = () => {
               Mieszkanie {flatData.num}
             </h1>
             <h2 className="text-xl pt-4 pb-2">
-              Dostępność: {noweMieszkania[0].status}
+              Dostępność: {flatData.status}
             </h2>
             <div className="border-2 flex flex-row lg:w-8/12 w-full text-lg">
               <ul className="lg:w-8/12 w-full font-bold">
@@ -59,17 +59,17 @@ export const PrzykladowaKartaMieszkania = () => {
                 <li className="border p-1 bg-gray-100">Powierzchnia ogródka</li>
               </ul>
               <ul className="w-4/12">
-                <li className="border p-1">{noweMieszkania[0].num}</li>
+                <li className="border p-1">{flatData.num}</li>
                 <li className="border p-1 bg-gray-100">
-                  {noweMieszkania[0].pow} m²
+                  {flatData.pow} m²
                 </li>
-                <li className="border p-1">{noweMieszkania[0].budynek}</li>
+                <li className="border p-1">{flatData.budynek}</li>
                 <li className="border p-1 bg-gray-100">
-                  {noweMieszkania[0].kondygnacja}
+                  {flatData.kondygnacja}
                 </li>
-                <li className="border p-1">{noweMieszkania[0].pokoje}</li>
+                <li className="border p-1">{flatData.pokoje}</li>
                 <li className="border p-1 bg-gray-100">
-                  {noweMieszkania[0].ogrod} m²
+                  {flatData.ogrod} m²
                 </li>
               </ul>
             </div>
@@ -78,7 +78,7 @@ export const PrzykladowaKartaMieszkania = () => {
               Zapytaj o mieszkanie
             </button>
             </Link>
-            <a href={noweMieszkania[0].rzut} download={true}>
+            <a href={flatData.rzut} download={true}>
               <button className="lg:w-8/12 w-full bg-gray-400 py-2 text-white text-lg hover:bg-slate-600">
                 Pobierz rzut 2D
               </button>
@@ -114,14 +114,14 @@ export const PrzykladowaKartaMieszkania = () => {
           </div>
           {activeButton === 0 && (
             <iframe
-              src={noweMieszkania[0].ttdh}
+              src={flatData.ttdh}
               height={1300}
               width={600}
               className="w-full lg:h-[90%] h-96"
             />
           )}
           {activeButton === 1 && (
-            <a href={noweMieszkania[0].spacer} target="_blank">
+            <a href={flatData.spacer} target="_blank">
               <img
                 src={spacerPlaceholder}
                 alt="3destate spacer"
@@ -131,14 +131,14 @@ export const PrzykladowaKartaMieszkania = () => {
           )}
           {activeButton === 2 && (
             <img
-              src={noweMieszkania[0].rzut}
+              src={flatData.rzut}
               alt="rzut2d"
               className="lg:h-[90%] mx-auto h-auto"
             />
           )}
         </div>
 
-      </div>
+      </div>)}
 
       <FormularzKontaktowy/>
     </section>

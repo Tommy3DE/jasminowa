@@ -27,7 +27,7 @@ type Flats = {
 
 export const noweMieszkania:Flats[] = [
     {
-        num: '97A/1',
+        num: '97A1',
         pow:  74.45,
         ogrod: 0,
         budynek: 2,
@@ -39,7 +39,7 @@ export const noweMieszkania:Flats[] = [
         ttdh: 'https://360.3destate.pl/3d-estate---przyklady-spacerow/1?hideDarkModeButton=true'
     },
     {
-        num: '97A/10',
+        num: '97A10',
         pow:  74.45,
         ogrod: 0,
         budynek: 2,

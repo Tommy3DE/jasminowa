@@ -66,7 +66,7 @@ const FlatsNew = () => {
                 Rzut
               </a>
             </div>
-            <Link className="w-[12.5%] text-center" to={`/flat/${flat.num}`}>
+            <Link className="w-[12.5%] text-center" to={`/mieszkanie/${flat.num}`}>
               <p className="text-sm  border-black border-[1px] md:py-1 rounded-sm atagbtn ml-4">
                 Więcej
               </p>
