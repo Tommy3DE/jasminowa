@@ -23,10 +23,13 @@
     color:white;
   }
 
-  .atagbtn{
+  .atagbtn, .atagbtnlg{
     -webkit-transition: ease-out 0.4s;
     -moz-transition: ease-out 0.4s;
     transition: ease-out 0.4s;
-    
+  }
 
+  .atagbtnlg:hover{
+    box-shadow: inset 130px 0 0 0 #b59d32;
+    color:white;
   }
