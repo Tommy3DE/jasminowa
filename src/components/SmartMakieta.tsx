@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Element } from "react-scroll";
 
 const TEST_GUID = '6b248da8-fe5e-4253-8fae-b443c131c970';
 const SM_GUID = 'b6e31bf8-3035-45b0-9bf9-e66aeea813e3';
@@ -43,9 +44,9 @@ const SmartMakieta = () => {
 
 
   return (
-    <div className="smart-makieta-container" style={smContainerStyle} ref={viewerRef}>
+    <Element className="smart-makieta-container" style={smContainerStyle} ref={viewerRef} name="mieszkania">
       <div id="smart-makieta" style={smStyle} />
-    </div>
+    </Element>
   );
 };
 

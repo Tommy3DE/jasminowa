@@ -4,9 +4,9 @@ import { Element } from "react-scroll";
 import { Link } from "react-router-dom";
 import "./Atuty.css";
 const FlatsNew = () => {
-  const tytuly = ['Numer', 'Pow.', 'Ogródek', 'Piętro', 'Pokoje', 'Status', 'Katalog', 'Więcej']
+  const tytuly = ['Numer', 'Pow.', 'Ogródek', 'Piętro', 'Pokoje', 'Status', 'Widok 360', 'Wirtualny spacer']
   return (
-    <Element className="cinzel w-full h-auto bg-[#2f917e]" name="mieszkania">
+    <section className="cinzel w-full h-auto bg-[#2f917e]">
       <h1 className="lg:text-5xl text-white text-center py-10 text-3xl">
         Dostępne mieszkania
       </h1>
@@ -52,7 +52,7 @@ const FlatsNew = () => {
             <div className="w-[12.5%] text-center lg:block hidden">
               <a
                 className="text-sm  border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4"
-                href={flat.rzut}
+                href={flat.ttdh}
                 target="_blank"
               >
                 Rzut
@@ -60,13 +60,13 @@ const FlatsNew = () => {
             </div>
             <Link className="w-[12.5%] text-center" to={`/mieszkanie/${flat.num}`}>
               <p className="md:text-sm  border-black border-[1px] md:py-1 rounded-sm atagbtnlg lg:mx-4 text-xs ">
-                Więcej
+                Spacer
               </p>
             </Link>
           </li>
         ))}
       </ul>
-    </Element>
+    </section>
   );
 };
 
