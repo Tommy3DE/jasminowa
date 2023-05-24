@@ -76,11 +76,8 @@ const FormularzKontaktowy = () => {
       onSubmit={handleSubmit}
       ref={form}
       >
-        <h1 className="text-3xl text-white  mb-8">
-          Zamieszkaj na <br />
-          Jaspisowej
-        </h1>
-        <h2 className="text-2xl text-white">Zapraszamy do kontaktu</h2>
+        
+        <h1 className="text-3xl text-white">Zapraszamy do kontaktu</h1>
         <input
           name='user_name'
           type="text"
