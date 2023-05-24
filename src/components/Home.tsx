@@ -22,13 +22,15 @@ const Home: React.FC = () => {
       <Navbar />
       <Main />
       <Atuty />
-      <Gallery />
+      <SmartMakieta />
       <div className="w-full h-auto p-3 bg-[#2f917e] flex justify-center text-white text-lg cinzel">
           <h1 className={`mr-2 border-white border p-1 items-center ${oldVersion ? 'text-xl cursor-not-allowed' : ' cursor-pointer text-gray-500 border-gray-500'}`} onClick={handleClick}>Wersja 1</h1>
           <h2 className={`ml-2 border-white border p-1 h-auto ${oldVersion ? 'text-gray-500 border-gray-500 cursor-pointer' : 'text-xl cursor-not-allowed'}`} onClick={handleClick}>Wersja 2</h2>
       </div>
       {oldVersion ? <Flats /> : <FlatsNew />}
-      <SmartMakieta />
+      <Gallery />
+      
+      
       <Okolica />
       <Mapa />
       <Aktualnosci />
