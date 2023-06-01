@@ -19,7 +19,7 @@
   }
   
   .atagbtn:hover{
-    box-shadow: inset 45px 0 0 0 #b59d32;
+    box-shadow: inset 100px 0 0 0 #d6bb45;
     color:white;
   }
 
@@ -30,7 +30,7 @@
   }
 
   .atagbtnlg:hover{
-    box-shadow: inset 130px 0 0 0 #b59d32;
+    box-shadow: inset 130px 0 0 0 #d6bb45;
     color:white;
   }
   

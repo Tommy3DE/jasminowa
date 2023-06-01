@@ -12,23 +12,28 @@ const Navbar = () => {
         />
         <ul className="md:flex text-[#2f917e] justify-center w-[70%] items-center text-[17px] uppercase hidden">
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            <Link to="atuty" smooth={true} duration={1000}>
+            <Link to="atuty" smooth={true} duration={1000} offset={-120}>
               Atuty inwestycji
             </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            <Link to="mieszkania" smooth={true} duration={1000}>
+            <Link to="mieszkania" smooth={true} duration={1000} offset={-170}>
               Zobacz mieszkania
             </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            <Link to="lokalizacja" smooth={true} duration={1000}>
+            <Link to="lokalizacja" smooth={true} duration={1000} offset={-97}>
               Lokalizacja
             </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            <Link to="kontakt" smooth={true} duration={1000}>
+            <Link to="kontakt" smooth={true} duration={1000} offset={120}>
               Kontakt
+            </Link>
+          </li>
+          <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
+            <Link to="aktualnosci" smooth={true} duration={1000} offset={-140}>
+              Aktualności
             </Link>
           </li>
         </ul>

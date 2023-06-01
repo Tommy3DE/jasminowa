@@ -72,7 +72,7 @@ const FormularzKontaktowy = () => {
     <Element className="h-full w-full lg:relative" name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full hidden lg:block" />
       <form 
-      className="cinzel bg-[#b59d32] xl:h-1/2 min-h-[800px] xl: max-h-full h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 " 
+      className="cinzel bg-[#b59d32] xl:h-1/2 min-h-[800px] xl: max-h-full h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 rounded-md" 
       onSubmit={handleSubmit}
       ref={form}
       >
@@ -82,7 +82,7 @@ const FormularzKontaktowy = () => {
           name='user_name'
           type="text"
           placeholder="Imię i Nazwisko"
-          className="placeholder:text-gray-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
+          className="placeholder:text-gray-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya lg:text-lg"
           required={true}
           ref={nameRef}
           onFocus={handleNameFocus}
@@ -95,7 +95,7 @@ const FormularzKontaktowy = () => {
           name='user_mail'
           type="email"
           placeholder="Adres email"
-          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
+          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya lg:text-lg"
           required={true}
           ref={mailRef}
           onFocus={handleMailFocus}
@@ -108,7 +108,7 @@ const FormularzKontaktowy = () => {
           name='user_phone'
           type="tel"
           placeholder="Telefon"
-          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya"
+          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya lg:text-lg"
           pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
           maxLength={9}
           required={true}
@@ -122,7 +122,7 @@ const FormularzKontaktowy = () => {
         <textarea
           name='message'
           placeholder="Treść wiadomości"
-          className="placeholder:text-slate-400 md:p-3 p-2 w-11/12 h-40 mt-3 alegreya min-h-[40px] "
+          className="placeholder:text-slate-400 md:p-3 p-2 w-11/12 h-40 mt-3 alegreya min-h-[40px] lg:text-lg "
           ref={messageRef}
         />
         <div className="flex flex-col alegreya text-xs md:text-md">

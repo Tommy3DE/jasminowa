@@ -6,7 +6,7 @@ import "./Atuty.css";
 const FlatsNew = () => {
   const tytuly = ['Numer', 'Pow.', 'Ogródek', 'Piętro', 'Pokoje', 'Status', 'Widok 360', 'Szczegóły']
   return (
-    <section className="cinzel w-full h-auto bg-[#2f917e]">
+    <Element name="mieszkania" className="cinzel w-full h-auto bg-[#2f917e]">
       <h1 className="lg:text-5xl text-white text-center py-10 text-3xl">
         Dostępne mieszkania
       </h1>
@@ -18,26 +18,26 @@ const FlatsNew = () => {
       <ul className="text-black mx-auto py-3 overflow-x-scroll">
         {noweMieszkania.map((flat) => (
           <li
-            className="lg:w-1/2 mx-auto bg-slate-50 flex lg:justify-between justify-evenly sm:justify-between py-7 my-3 items-center w-full  md:text-md text-xs lg:text-lg"
+            className="lg:w-1/2 mx-auto bg-slate-50 flex lg:justify-between justify-evenly sm:justify-between py-7 my-3 items-center rounded-md shadow-2xl shadow-slate-700 w-full  md:text-md text-xs lg:text-lg hover:bg-opacity-90 group"
             key={flat.num}
           >
-            <div className="w-[12.5%] text-center ">
+            <div className="w-[12.5%] text-center group-hover:text-xl">
               <p>{flat.num}</p>
             </div>
-            <div className="w-[12.5%] text-center">
+            <div className="w-[12.5%] text-center group-hover:text-xl">
               <p>{flat.pow} m²</p>
             </div>
-            <div className="w-[12.5%] text-center lg:block hidden">
+            <div className="w-[12.5%] text-center lg:block hidden group-hover:text-xl">
               <p>{!flat.ogrod ? "brak" : flat.ogrod + ' m²'}</p>
             </div>
-            <div className="w-[12.5%] text-center lg:block hidden">
+            <div className="w-[12.5%] text-center lg:block hidden group-hover:text-xl">
               <p>{flat.kondygnacja}</p>
             </div>
-            <div className="w-[12.5%] text-center lg:block hidden">
+            <div className="w-[12.5%] text-center lg:block hidden group-hover:text-xl">
               <p>{flat.pokoje}</p>
             </div>
             
-            <div className="w-[12.5%] text-center">
+            <div className="w-[12.5%] text-center group-hover:text-xl group-hover:font-semibold">
               <p
                 className={`${flat.status === "Wolne" && "text-green-500"} ${
                   flat.status === "Sprzedane" && "text-red-600"
@@ -51,22 +51,22 @@ const FlatsNew = () => {
             </div>
             <div className="w-[12.5%] text-center lg:block hidden">
               <a
-                className="text-sm  border-black border-[1px] md:p-1 rounded-sm atagbtn ml-4"
+                className={`text-sm  border-gray-400 border-[2px] md:p-1 rounded-[4px] atagbtn ml-4  group-hover:text-lg`}
                 href={flat.ttdh}
                 target="_blank"
               >
-                Rzut
+                Rzut 3D
               </a>
             </div>
             <Link className="w-[12.5%] text-center" to={`/mieszkanie/${flat.num}`}>
-              <p className="md:text-sm  border-black border-[1px] md:py-1 rounded-sm atagbtnlg lg:mx-4 text-xs ">
+              <p className="md:text-sm  border-gray-400 border-[2px] md:py-1 rounded-[4px] atagbtnlg lg:mx-4 text-xs  group-hover:text-lg">
                 Zobacz
               </p>
             </Link>
           </li>
         ))}
       </ul>
-    </section>
+    </Element>
   );
 };
 

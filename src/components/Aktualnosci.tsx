@@ -1,16 +1,17 @@
 import React from "react";
 import { posty } from "../data/posty";
+import { Element } from "react-scroll";
 
 const Aktualnosci = () => {
   return (
-    <section className="mx-auto w-full cinzel px-3">
+    <Element name="aktualnosci" className="mx-auto w-full cinzel px-3">
       <h1 className="text-[#2f917e] lg:text-5xl text-3xl text-center my-20">
         Aktualności
       </h1>
-      <ul>
+      <ul className="flex flex-col items-center">
         {posty.map(({ tytul, img, data, text1, text2, text3, text4 }) => (
-          <li className="flex mb-20 lg:flex-row flex-col" key={tytul}>
-            <img src={img} alt={data} className="xl:w-[333px] h-auto" />
+          <li className="flex mb-20 lg:flex-row flex-col border-2 p-1 rounded border-[#2f917e] lg:w-9/12 " key={tytul}>
+            <img src={img} alt={data} className="xl:w-[333px] h-auto rounded-md" />
             <div className="flex flex-col justify-start items-start px-5">
               <h2 className="font-semibold text-lg">{tytul}</h2>
               <p className="text-sm text-gray-500 my-5">{data}</p>
@@ -27,7 +28,7 @@ const Aktualnosci = () => {
           </li>
         ))}
       </ul>
-    </section>
+    </Element>
   );
 };
 

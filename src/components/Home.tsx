@@ -12,6 +12,7 @@ import FormularzKontaktowy from "./FormularzKontaktowy";
 import Mapa from "./Mapa";
 import FlatsNew from "./FlatsNew";
 import "./Atuty.css";
+import BackToTop from "./utilityComponents/BackToTop";
 
 const Home: React.FC = () => {
   const [tabelaIsVisible, setTabelaIsVisible] = useState<boolean>(true);
@@ -21,6 +22,7 @@ const Home: React.FC = () => {
   return (
     <>
       <Navbar />
+      <BackToTop/>
       <Main />
       <Atuty />
       <div className="w-full h-auto p-3 bg-[#2f917e] flex justify-center text-white text-lg cinzel">
@@ -28,7 +30,7 @@ const Home: React.FC = () => {
           <h1
             className={`mr-2   p-1 items-center ${
               tabelaIsVisible
-                ? "cursor-not-allowed bg-blue-400 rounded-lg border"
+                ? "cursor-not-allowed bg-[#2f917e] rounded-lg border"
                 : " cursor-pointer text-gray-300 border-gray-500"
             }`}
             onClick={handleClick}
@@ -39,7 +41,7 @@ const Home: React.FC = () => {
             className={`ml-2 border-white border p-1 h-auto rounded-lg ${
               tabelaIsVisible
                 ? "text-gray-300 border-gray-500 cursor-pointer"
-                : "cursor-not-allowed bg-blue-400"
+                : "cursor-not-allowed bg-[#2f917e]"
             }`}
             onClick={handleClick}
           >

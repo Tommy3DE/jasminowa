@@ -6,7 +6,7 @@ import './Atuty.css'
 const Atuty: React.FC = () => {
   return (
     <Element className="cinzel lg:mx-0 mx-3" name='atuty'>
-      <h1 className="lg:text-5xl text-center my-20 text-[#2f917e] text-3xl ">
+      <h1 className="lg:text-5xl text-center mt-24 lg:mt-40 text-[#2f917e] text-3xl ">
         ATUTY INWESTYCJI
       </h1>
       <ul className="xl:w-1/2 w-full mx-auto">

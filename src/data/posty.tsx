@@ -28,8 +28,7 @@ export const posty:Posts[] = [
         img: post4,
         text1: 'Przyszli właściciele mieszkań coraz częściej odwiedzają budowę, bo przecież to już czas na to, aby zacząć myśleć o urządzaniu kuchni salonu łazienki. Królują wanny wolnostojące i prysznic. Niedługo pierwsze wizualizacje, którymi się podzielimy. A w międzyczasie widać żelbet i silikaty. Dlaczego właśnie taki wybór?',
         text2: `✅ UZNAJEMY TYLKO MATERIAŁY O WYSOKIEJ IZOLACJI AKUSTYCZNEJ, OGNIOODPORNOŚCI I WYTRZYMAŁOŚCI \n✅ CENIMY EKOLOGICZNE PODEJŚCIE DO BUDOWANIA I ZDROWIE NASZYCH KLIENTÓW \n✅ STAWIAMY NA OSZCZĘDNOŚĆ W TYM ZDOLNOŚĆ AKUMULACJI CIEPŁA \n✅ SZANUJEMY BEZPIECZEŃSTWO PRZYSZŁYCH WŁAŚCICIELI MIESZKAŃ`,
-        text3: 'Zobacz jak idzie postęp prac, zapraszamy na Jaspisową 6, przyjdź zobacz jak budujemy.',
-        text4: ''
+
     },    
     {
         tytul: 'W tym tygodniu wylewamy strop',
