@@ -4,10 +4,10 @@ import { AiOutlinePhone, AiOutlineMail } from "react-icons/ai";
 
 const CallToAction = () => {
   return (
-    <div className="flex">
+    <div className="lg:flex hidden">
         <div className="fixed top-4 right-36 z-50 flex flex-col justify-center items-center hover:scale-110 cursor-pointer">
         <a
-          href="mailto:sprzedaz@jaspisowaapartamenty.pl"
+          href="mailto:sprzedaz@jaspisowaapartamenty.pl?subject=Apartamenty%20jaspisowa&body=Witam,%0D%0A%0D%0AProszę%20o%20podanie%20większej%20ilości%20informacji%20o%20tej%20inwestycji.%0D%0A%0D%0APozdrawiam"
           className=" text-5xl bg-[#2f917e] bg-opacity-80 hover:bg-opacity-100 text-white  rounded-full p-1"
         >
           <AiOutlineMail />

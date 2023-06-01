@@ -13,6 +13,7 @@ import Mapa from "./Mapa";
 import FlatsNew from "./FlatsNew";
 import "./Atuty.css";
 import BackToTop from "./utilityComponents/BackToTop";
+import SocialSidebar from "./utilityComponents/SocialSidebar";
 
 const Home: React.FC = () => {
   const [tabelaIsVisible, setTabelaIsVisible] = useState<boolean>(true);
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
     <>
       <Navbar />
       <BackToTop/>
+      <SocialSidebar/>
       <Main />
       <Atuty />
       <div className="w-full h-auto p-3 bg-[#2f917e] flex justify-center text-white text-lg cinzel">

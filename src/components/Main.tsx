@@ -21,7 +21,7 @@ const Main: React.FC = () => {
 
   return (
     <Element name="main">
-      <div className="relative lg:h-screen  w-full h-[800px]">
+      <div className="relative lg:h-screen w-full h-[800px]">
         {photos.map((photo: string, index: number) => (
           <div key={index}>
             <img
