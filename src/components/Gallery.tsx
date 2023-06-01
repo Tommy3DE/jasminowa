@@ -12,12 +12,17 @@ const Gallery = () => {
         jaspis1, jaspis2, jaspis3, e1, f2, d1
     ]
   return (
+    <div>
+      <h1 className="lg:text-5xl text-center my-12 text-[#2f917e] text-3xl cinzel">
+        Galeria
+      </h1>
     <div className='flex md:flex-row flex-col flex-wrap'>
       {galleryPhotos.map((photo, index)=>(
-        <div className='lg:w-1/3 md:w-1/2 w-full ' key={index}>
-          <img src={photo} alt="photo" className='md:h-full xl:min-h-5/6 xl:max-h-[530px] w-full h-[258px]' />
+        <div className='lg:w-1/3 md:w-1/2 w-full' key={index}>
+          <img src={photo} alt="photo" className='md:h-full xl:min-h-5/6 xl:max-h-[530px] w-full h-[258px] lg:p-1 rounded-[10px]' />
         </div>
       ))}
+    </div>
     </div>
   )
 }
