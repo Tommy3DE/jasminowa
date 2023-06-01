@@ -14,23 +14,41 @@ import FlatsNew from "./FlatsNew";
 import "./Atuty.css";
 
 const Home: React.FC = () => {
-  const [oldVersion, setOldVersion] = useState<boolean>(true);
-  const handleClick = () => setOldVersion((prevState: boolean) => !prevState);
+  const [tabelaIsVisible, setTabelaIsVisible] = useState<boolean>(true);
+  const handleClick = () =>
+    setTabelaIsVisible((prevState: boolean) => !prevState);
 
   return (
     <>
       <Navbar />
       <Main />
       <Atuty />
-      <SmartMakieta />
       <div className="w-full h-auto p-3 bg-[#2f917e] flex justify-center text-white text-lg cinzel">
-          <h1 className={`mr-2 border-white border p-1 items-center ${oldVersion ? 'text-xl cursor-not-allowed' : ' cursor-pointer text-gray-500 border-gray-500'}`} onClick={handleClick}>Wersja 1</h1>
-          <h2 className={`ml-2 border-white border p-1 h-auto ${oldVersion ? 'text-gray-500 border-gray-500 cursor-pointer' : 'text-xl cursor-not-allowed'}`} onClick={handleClick}>Wersja 2</h2>
+        <div className="flex bg-white p-1 border-gray-400 border-2 rounded-xl">
+          <h1
+            className={`mr-2   p-1 items-center ${
+              tabelaIsVisible
+                ? "cursor-not-allowed bg-blue-400 rounded-lg border"
+                : " cursor-pointer text-gray-300 border-gray-500"
+            }`}
+            onClick={handleClick}
+          >
+            Tabela
+          </h1>
+          <h2
+            className={`ml-2 border-white border p-1 h-auto rounded-lg ${
+              tabelaIsVisible
+                ? "text-gray-300 border-gray-500 cursor-pointer"
+                : "cursor-not-allowed bg-blue-400"
+            }`}
+            onClick={handleClick}
+          >
+            Smart Makieta
+          </h2>
+        </div>
       </div>
-      {oldVersion ? <Flats /> : <FlatsNew />}
+      {tabelaIsVisible ? <FlatsNew /> : <SmartMakieta />}
       <Gallery />
-      
-      
       <Okolica />
       <Mapa />
       <Aktualnosci />

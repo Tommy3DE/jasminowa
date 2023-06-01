@@ -55,7 +55,7 @@ const Main: React.FC = () => {
                 </p>
               </div>
             </div>
-            <div className="absolute lg:top-[58%] top-[10%] md:top-[50%]">
+            <div className="absolute xl:top-[68%] lg:top-[58%] top-[10%] md:top-[50%] bottom-0" id="hero">
               <Link
                 to="mieszkania"
                 smooth={true} 
