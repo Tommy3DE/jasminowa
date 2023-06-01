@@ -10,7 +10,7 @@ const Aktualnosci = () => {
       </h1>
       <ul className="flex flex-col items-center">
         {posty.map(({ tytul, img, data, text1, text2, text3, text4 }) => (
-          <li className="flex mb-20 lg:flex-row flex-col border-2 p-1 rounded border-[#2f917e] lg:w-9/12 " key={tytul}>
+          <li className="flex mb-20 lg:flex-row flex-col border-2 p-1 rounded border-[#2f917e] lg:w-9/12 shadow-2xl" key={tytul}>
             <img src={img} alt={data} className="xl:w-[333px] h-auto rounded-md" />
             <div className="flex flex-col justify-start items-start px-5">
               <h2 className="font-semibold text-lg">{tytul}</h2>

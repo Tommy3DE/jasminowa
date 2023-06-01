@@ -1,9 +1,11 @@
 import { Link } from "react-scroll";
 import logo from "../assets/logo.png";
 import "../App.css";
+import CallToAction from "./utilityComponents/CallToAction";
 const Navbar = () => {
   return (
     <nav className="fixed bg-white shadow-md w-full m-auto alegreya z-50">
+      <CallToAction/>
       <div className="flex justify-evenly h-[100px] lg:w-[60%] m-auto w-full">
         <img
           src={logo}
@@ -27,13 +29,13 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            <Link to="kontakt" smooth={true} duration={1000} offset={120}>
-              Kontakt
+            <Link to="aktualnosci" smooth={true} duration={1000} offset={-140}>
+              Aktualności
             </Link>
           </li>
           <li className="mx-5 cursor-pointer hover:border-b-2 hover:border-[#b59d32] transition-all hover:text-[19px]">
-            <Link to="aktualnosci" smooth={true} duration={1000} offset={-140}>
-              Aktualności
+            <Link to="kontakt" smooth={true} duration={1000} offset={120}>
+              Kontakt
             </Link>
           </li>
         </ul>

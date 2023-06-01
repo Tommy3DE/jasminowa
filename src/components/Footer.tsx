@@ -35,7 +35,7 @@ const Footer = () => {
           </li>
         </ul>
       </div>
-      <section className="lg:mx-auto lg:max-w-[50%] lg:px-3  w-full flex flex-col items-center justify-start lg:items-start  my-10">
+      <section className="lg:mx-auto lg:max-w-[50%] lg:px-3  w-full flex flex-col items-center justify-start lg:items-center  my-10">
         <h1 className="text-[17px] font-bold cinzel">DOMWISE Sp. z o.o.</h1>
         <a href="mailto:sprzedaz@jaspisowaapartamenty.pl">
           sprzedaz@jaspisowaapartamenty.pl
