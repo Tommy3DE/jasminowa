@@ -2,6 +2,7 @@ import jaspisbg from "../assets/photos/hq/jaspishq1.jpeg";
 import { Element } from "react-scroll";
 import { FormEvent, useRef, useState } from "react";
 import emailjs from '@emailjs/browser'
+import { Link } from "react-router-dom";
 
 const FormularzKontaktowy = () => {
   const [nameFocus, setNameFocus] = useState(false)
@@ -72,7 +73,7 @@ const FormularzKontaktowy = () => {
     <Element className="h-full w-full lg:relative" name="kontakt">
       <img src={jaspisbg} alt="bg-formularz" className="w-full h-full hidden lg:block" />
       <form 
-      className="cinzel bg-[#b59d32] xl:h-1/2 min-h-[800px] xl: max-h-full h-screen lg:w-1/2 w-full flex flex-col items-start justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 rounded-md" 
+      className="cinzel bg-[#b59d32] xl:h-1/2 min-h-[800px] xl:max-h-full h-auto lg:w-1/2 w-full flex flex-col items-center justify-center mx-auto p-10 pb-20 lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 rounded-md" 
       onSubmit={handleSubmit}
       ref={form}
       >
@@ -82,7 +83,7 @@ const FormularzKontaktowy = () => {
           name='user_name'
           type="text"
           placeholder="Imię i Nazwisko"
-          className="placeholder:text-gray-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya lg:text-lg"
+          className="placeholder:text-gray-400 md:p-3 p-2 lg:w-4/5 w-full md:mt-5 mt-2 alegreya lg:text-lg rounded-md"
           required={true}
           ref={nameRef}
           onFocus={handleNameFocus}
@@ -95,7 +96,7 @@ const FormularzKontaktowy = () => {
           name='user_mail'
           type="email"
           placeholder="Adres email"
-          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya lg:text-lg"
+          className="placeholder:text-slate-400 md:p-3 p-2 lg:w-4/5 w-full md:mt-5 mt-2 alegreya lg:text-lg rounded-md"
           required={true}
           ref={mailRef}
           onFocus={handleMailFocus}
@@ -108,7 +109,7 @@ const FormularzKontaktowy = () => {
           name='user_phone'
           type="tel"
           placeholder="Telefon"
-          className="placeholder:text-slate-400 md:p-3 p-2 w-4/5 md:mt-5 mt-2 alegreya lg:text-lg"
+          className="placeholder:text-slate-400 md:p-3 p-2 lg:w-4/5 w-full md:mt-5 mt-2 alegreya lg:text-lg rounded-md"
           pattern="[0-9]{3}[0-9]{3}[0-9]{3}"
           maxLength={9}
           required={true}
@@ -122,17 +123,17 @@ const FormularzKontaktowy = () => {
         <textarea
           name='message'
           placeholder="Treść wiadomości"
-          className="placeholder:text-slate-400 md:p-3 p-2 w-11/12 h-40 mt-3 alegreya min-h-[40px] lg:text-lg "
+          className="placeholder:text-slate-400 md:p-3 p-2 lg:w-4/5 w-full h-40 mt-3 alegreya min-h-[40px] lg:text-lg  rounded-md"
           ref={messageRef}
         />
-        <div className="flex flex-col alegreya text-xs md:text-md">
+        <div className="flex flex-col alegreya text-md lg:w-4/5 w-full">
           <div className="px-3 mt-2">
             <input type="checkbox" required={true} />
             <span className=" text-white ml-2">
               *Oświadczam, iż zapoznałem/am się z{" "}
-              <a href="" className="text-blue-600">
+              <Link to="/prywatnosc" className="text-blue-600">
                 Polityką prywatności.
-              </a>
+              </Link>
             </span>
           </div>
           <div className="px-3 mt-3">
@@ -158,7 +159,7 @@ const FormularzKontaktowy = () => {
         </div>
         <button
           type="submit"
-          className="bg-[#2f917e] md:mt-5 text-white alegreya text-xl p-3 font-bold mt-1 mx-auto"
+          className="bg-[#2f917e]  text-white alegreya text-xl p-3 font-bold mt-5 mx-auto rounded-md"
           
         >
           Wyślij zapytanie

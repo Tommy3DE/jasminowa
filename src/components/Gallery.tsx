@@ -19,7 +19,7 @@ const Gallery = () => {
     <div className='flex md:flex-row flex-col flex-wrap'>
       {galleryPhotos.map((photo, index)=>(
         <div className='lg:w-1/3 md:w-1/2 w-full' key={index}>
-          <img src={photo} alt="photo" className='md:h-full xl:min-h-5/6 xl:max-h-[530px] w-full h-[258px] lg:p-1 rounded-[10px]' />
+          <img src={photo} alt="photo" className='md:h-full xl:min-h-5/6 xl:max-h-[530px] w-full h-[258px] lg:p-1 lg:rounded-[10px]' />
         </div>
       ))}
     </div>

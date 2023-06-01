@@ -59,7 +59,7 @@ const FlatsNew = () => {
               </a>
             </div>
             <Link className="w-[12.5%] text-center" to={`/mieszkanie/${flat.num}`}>
-              <p className="md:text-sm  border-gray-400 border-[2px] md:py-1 rounded-[4px] atagbtnlg lg:mx-4 text-xs  group-hover:text-lg">
+              <p className="md:text-sm  border-gray-400 border-[2px] py-1 rounded-[4px] atagbtnlg lg:mx-4 text-xs  group-hover:text-lg">
                 Zobacz
               </p>
             </Link>
