@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from 'react';
+import * as Papa from 'papaparse';
 import { noweMieszkania } from "../data/noweMieszkania";
 import { Element } from "react-scroll";
 import { Link } from "react-router-dom";
 import "./Atuty.css";
 const FlatsNew = () => {
   const tytuly = ['Numer', 'Pow.', 'Ogródek', 'Piętro', 'Pokoje', 'Status', 'Widok 360', 'Szczegóły']
+  const [data, setData] = useState<[][]>([]);
+  useEffect(() => {
+          Papa.parse(
+              'https://docs.google.com/spreadsheets/d/e/2PACX-1vRVqYCNhM_zeJhpGw1EbTKHoBjhBG9g0o-S5L8Y_o6KwJ3EpCtuMJ13-19HsbAq4kheVSed1i2JKBmt/pub?gid=0&single=true&output=csv',
+              {
+                  download: true,
+                  header: true,
+                  complete: (results: any) => {
+                      var data = results.data;
+                      setData(data);
+                  },
+              }
+          );
+  }, []);
   return (
     <Element name="mieszkania" className="cinzel w-full h-auto bg-[#2f917e]">
       <h1 className="lg:text-5xl text-white text-center py-10 text-3xl">
@@ -16,7 +31,7 @@ const FlatsNew = () => {
         ))}
       </ul>
       <ul className="text-black mx-auto py-3 overflow-x-scroll">
-        {noweMieszkania.map((flat) => (
+        {data.map((flat) => (
           <li
             className="lg:w-1/2 mx-auto bg-slate-50 flex lg:justify-between justify-evenly sm:justify-between py-7 my-3 items-center rounded-md shadow-2xl shadow-slate-700 w-full  md:text-md text-xs lg:text-lg hover:bg-opacity-90 group"
             key={flat.num}
