@@ -4,9 +4,19 @@ import { noweMieszkania } from "../data/noweMieszkania";
 import { Element } from "react-scroll";
 import { Link } from "react-router-dom";
 import "./Atuty.css";
-const FlatsNew = () => {
+interface Flat {
+  num: string;
+  pow: string;
+  ogrod: string | null;
+  kondygnacja: string;
+  pokoje: string;
+  status: string;
+  ttdh: string;
+}
+
+const FlatsNew: React.FC = () => {
   const tytuly = ['Numer', 'Pow.', 'Ogródek', 'Piętro', 'Pokoje', 'Status', 'Widok 360', 'Szczegóły']
-  const [data, setData] = useState<[][]>([]);
+  const [data, setData] = useState<Flat[]>([]);
   useEffect(() => {
           Papa.parse(
               'https://docs.google.com/spreadsheets/d/e/2PACX-1vRVqYCNhM_zeJhpGw1EbTKHoBjhBG9g0o-S5L8Y_o6KwJ3EpCtuMJ13-19HsbAq4kheVSed1i2JKBmt/pub?gid=0&single=true&output=csv',
@@ -36,23 +46,23 @@ const FlatsNew = () => {
             className="lg:w-1/2 mx-auto bg-slate-50 flex lg:justify-between justify-evenly sm:justify-between py-7 my-3 items-center rounded-md shadow-2xl shadow-slate-700 w-full  md:text-md text-xs lg:text-lg hover:bg-opacity-90 group"
             key={flat.num}
           >
-            <div className="w-[12.5%] text-center group-hover:text-xl">
+            <div className="w-[12.5%] text-center ">
               <p>{flat.num}</p>
             </div>
-            <div className="w-[12.5%] text-center group-hover:text-xl">
+            <div className="w-[12.5%] text-center ">
               <p>{flat.pow} m²</p>
             </div>
-            <div className="w-[12.5%] text-center lg:block hidden group-hover:text-xl">
+            <div className="w-[12.5%] text-center lg:block hidden ">
               <p>{!flat.ogrod ? "brak" : flat.ogrod + ' m²'}</p>
             </div>
-            <div className="w-[12.5%] text-center lg:block hidden group-hover:text-xl">
+            <div className="w-[12.5%] text-center lg:block hidden ">
               <p>{flat.kondygnacja}</p>
             </div>
-            <div className="w-[12.5%] text-center lg:block hidden group-hover:text-xl">
+            <div className="w-[12.5%] text-center lg:block hidden ">
               <p>{flat.pokoje}</p>
             </div>
             
-            <div className="w-[12.5%] text-center group-hover:text-xl group-hover:font-semibold">
+            <div className="w-[12.5%] text-center  group-hover:font-semibold">
               <p
                 className={`${flat.status === "Wolne" && "text-green-500"} ${
                   flat.status === "Sprzedane" && "text-red-600"
@@ -66,7 +76,7 @@ const FlatsNew = () => {
             </div>
             <div className="w-[12.5%] text-center lg:block hidden">
               <a
-                className={`text-sm  border-gray-400 border-[2px] md:p-1 rounded-[4px] atagbtn ml-4  group-hover:text-lg`}
+                className={`text-sm  border-gray-400 border-[2px] md:p-1 rounded-[4px] atagbtn ml-4 `}
                 href={flat.ttdh}
                 target="_blank"
               >
@@ -74,7 +84,7 @@ const FlatsNew = () => {
               </a>
             </div>
             <Link className="w-[12.5%] text-center" to={`/mieszkanie/${flat.num}`}>
-              <p className="md:text-sm  border-gray-400 border-[2px] py-1 rounded-[4px] atagbtnlg lg:mx-4 text-xs  group-hover:text-lg">
+              <p className="md:text-sm  border-gray-400 border-[2px] py-1 rounded-[4px] atagbtnlg lg:mx-4 text-xs">
                 Zobacz
               </p>
             </Link>

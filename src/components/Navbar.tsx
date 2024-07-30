@@ -4,7 +4,7 @@ import "../App.css";
 import CallToAction from "./utilityComponents/CallToAction";
 const Navbar = () => {
   return (
-    <nav className="fixed bg-white shadow-md w-full m-auto alegreya z-50">
+    <nav className="fixed bg-white shadow-md w-full m-auto alegreya z-40">
       <CallToAction/>
       <div className="flex justify-evenly h-[100px] lg:w-[60%] m-auto w-full">
         <img
